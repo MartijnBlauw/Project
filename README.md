@@ -2,13 +2,9 @@
 # Booze your Credit!
 
 **Probleem** 
-
 Mensen gaan op vakantie en zijn benieuwd naar de leukste kroegen, cafés en barretjes om een drankje te doen. Maar welke horeca gelegenheden zijn er nou het leukst? Daarnaast zijn er voor horeca gelegenheden weinig mogelijkheden om de consument te bereiken. 
 
-Daarnaast zorgt deze app ervoor dat deze horeca gelegenheden een grotere naamsbekendheid krijgen en mensen kunnen op den duur een gratis drankje verdienen.
-
 **Oplossing**
-
 Via deze app kan de gebruiker zoeken naar dichtstbijzijnde horeca gelegenheden en zien hoe populair deze plek is onder de gebruikers. Hierdoor krijgen de horeca gelegenheden ook meer naamsbekendheid.
 
 **Main features:**
