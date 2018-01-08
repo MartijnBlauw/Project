@@ -22,7 +22,7 @@ Via deze app kan de gebruiker zoeken naar dichtstbijzijnde horeca gelegenheden e
 **Minimum viable product:**
 De login, de kaart, de mogelijkheid om punten te sparen en het overzicht waarin de gespaarde punten staan zijn MVP. De zoekfunctie en het overzicht van bezochte horeca gelegenheden zijn optioneel.
 
-**Schets**
+**Schets:**
 ![](https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Sketch%20Booze%20your%20Credit.png)
 
 **Data sources:**
