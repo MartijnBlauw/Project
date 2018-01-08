@@ -3,11 +3,11 @@
 
 **Probleem** 
 
-Mensen gaan op vakantie en zijn benieuwd naar de leukste kroegen, cafés en barretjes om een drankje te doen. Maar welke horeca gelegenheden zijn er nou het leukst? Daarnaast zijn er voor horeca gelegenheden weinig mogelijkheden om de consument te bereiken. 
+Mensen gaan op vakantie of een dagje erop uit en zijn benieuwd naar de leukste kroegen, cafés en barretjes om een drankje te doen. Maar welke horeca gelegenheden zijn nou het leukst? Daarnaast zijn er voor horeca gelegenheden weinig mogelijkheden om de consument te bereiken. 
 
 **Oplossing**
 
-Via deze app kan de gebruiker zoeken naar dichtstbijzijnde horeca gelegenheden en zien hoe populair deze plek is onder de gebruikers. Hierdoor krijgen de horeca gelegenheden ook meer naamsbekendheid.
+Via deze app kan de gebruiker zoeken naar dichtstbijzijnde horeca gelegenheden en zien hoe populair deze plek is onder de gebruikers, door middel van aantal uitgegeven punten. Hierdoor krijgen de aangesloten bedrijven ook meer naamsbekendheid.
 
 **Main features:**
 -	Registratie en login
