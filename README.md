@@ -12,33 +12,33 @@ Daarnaast zorgt deze app ervoor dat deze horeca gelegenheden een grotere naamsbe
 Via deze app kan de gebruiker zoeken naar dichtstbijzijnde horeca gelegenheden en zien hoe populair deze plek is onder de gebruikers. Hierdoor krijgen de horeca gelegenheden ook meer naamsbekendheid.
 
 **Main features:**
-•	Registratie en login
-•	Kaart waarop alle horeca gelegenheden te zien zijn
-•	Zoekfunctie 
-•	Mogelijkheid om punten te sparen door verificatie
-•	Persoonlijke pagina met gespaarde punten 
-•	Persoonlijke pagina met bezochte horeca gelegenheden
+-	Registratie en login
+-	Kaart waarop alle horeca gelegenheden te zien zijn
+-	Zoekfunctie 
+-	Mogelijkheid om punten te sparen door verificatie
+-	Persoonlijke pagina met gespaarde punten 
+-	Persoonlijke pagina met bezochte horeca gelegenheden
 
 **Minimum viable product:**
 De login, de kaart, de mogelijkheid om punten te sparen en het overzicht waarin de gespaarde punten staan zijn MVP. De zoekfunctie en het overzicht van bezochte horeca gelegenheden zijn optioneel.
 
 **Data sources:**
-•	Google Maps (https://developers.google.com/maps/)
-•	Google Places (https://developers.google.com/places/)
+-	Google Maps (https://developers.google.com/maps/)
+-	Google Places (https://developers.google.com/places/)
 
 **External components:**
-•	Firebase (https://firebase.google.com/)
-•	Google Maps (https://developers.google.com/maps/)
-•	Google Places (https://developers.google.com/places/)
+-	Firebase (https://firebase.google.com/)
+-	Google Maps (https://developers.google.com/maps/)
+-	Google Places (https://developers.google.com/places/)
 
 **Similar apps:**
-•	Bardoggy: Via de app worden de gebruikers geattendeerd op leuke activiteiten en lekkere drankjes in hun omgeving. De aangesloten bedrijven kunnen eigen coupons creëren waarmee consumenten eenvoudig nieuwe drankjes ontdekken en deze kunnen verzilveren bij aangesloten locaties in hun omgeving. 
-•	Heineken biertegoed: Met deze app kun je Biertegoed verzilveren voor Heineken bier in ruim 2000 cafés!
+-	Bardoggy: Via de app worden de gebruikers geattendeerd op leuke activiteiten en lekkere drankjes in hun omgeving. De aangesloten bedrijven kunnen eigen coupons creëren waarmee consumenten eenvoudig nieuwe drankjes ontdekken en deze kunnen verzilveren bij aangesloten locaties in hun omgeving. 
+-	Heineken biertegoed: Met deze app kun je Biertegoed verzilveren voor Heineken bier in ruim 2000 cafés!
 
 **Hardest parts:**
-•	Toevoegen van maps en de locaties van de horeca gelegenheden.
-•	Het verifiëren met het café (de locatie). 
-•	Inwisselen van de gespaarde punten. Het zou kunnen door middel van een QR-code, maar het zou ook kunnen door het personeel simpelweg op een knop te laten drukken waardoor er een bepaald aantal punten van je tegoed afgehaald wordt. 
+-	Toevoegen van maps en de locaties van de horeca gelegenheden.
+-	Het verifiëren met het café (de locatie). 
+-	Inwisselen van de gespaarde punten. Het zou kunnen door middel van een QR-code, maar het zou ook kunnen door het personeel simpelweg op een knop te laten drukken waardoor er een bepaald aantal punten van je tegoed afgehaald wordt. 
 Prerequisites
 Describe the things that you’ll have to get in order.
 •	List the data sources that you will use and whether you will need to transform the data before it is usable for your application. The list should include links to where the data sources can be found.
