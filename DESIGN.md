@@ -1,22 +1,10 @@
 # Design Document
 
+**Advanced Sketch**
+![](https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Advanced%20Sketch.png)
+
 **Classes**
-
-Location
-name
-placeID
-coordinate
-openNowStatus
-formattedAddress
-checkInTime
-creditsIssued 
-
-
-User
-id
-username
-history[Location]
-credits
+![](https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Classes.png)
 
 **APIs and frameworks**
 
