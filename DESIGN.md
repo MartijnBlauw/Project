@@ -12,6 +12,7 @@
 
 - Google Maps (https://developers.google.com/maps/)
 - Google Places (https://developers.google.com/places/)
+- Firebase (https://firebase.google.com/)
 
 **External source**
 
@@ -19,4 +20,9 @@ Alle data is afkomstig van de Google Places API.
 
 **Tables and fields**
 
-Ik gebruik geen database.
+Firebase:
+- Location: name, placeID, coordinate, openNowStatus, formattedAddress, checkInTime, creditIssued
+- User: id, username, history, credits
+
+'history' = all the locations where this person collected credits
+
