@@ -18,6 +18,7 @@
 		4811528C2007B181008F6109 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811528B2007B181008F6109 /* HistoryTableViewController.swift */; };
 		4811528E2007C93E008F6109 /* CollectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811528D2007C93E008F6109 /* CollectViewController.swift */; };
 		481152902007CB4F008F6109 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811528F2007CB4F008F6109 /* HelpViewController.swift */; };
+		487B09202010CFCA002F862A /* PlaceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487B091F2010CFCA002F862A /* PlaceLocation.swift */; };
 		D94ED336FE26D0AF929FCA06 /* Pods_BoozeYourCredit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A516AF5993C2BBC255551B1C /* Pods_BoozeYourCredit.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		4811528B2007B181008F6109 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		4811528D2007C93E008F6109 /* CollectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectViewController.swift; sourceTree = "<group>"; };
 		4811528F2007CB4F008F6109 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		487B091F2010CFCA002F862A /* PlaceLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceLocation.swift; sourceTree = "<group>"; };
 		9BD9B0858087BA315E0EF14A /* Pods-BoozeYourCredit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoozeYourCredit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoozeYourCredit/Pods-BoozeYourCredit.debug.xcconfig"; sourceTree = "<group>"; };
 		A516AF5993C2BBC255551B1C /* Pods_BoozeYourCredit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoozeYourCredit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +81,7 @@
 				4811528D2007C93E008F6109 /* CollectViewController.swift */,
 				4811528B2007B181008F6109 /* HistoryTableViewController.swift */,
 				481152892007AFBF008F6109 /* MapViewController.swift */,
+				487B091F2010CFCA002F862A /* PlaceLocation.swift */,
 				481152872007AF02008F6109 /* LoginViewController.swift */,
 				481152852007AE85008F6109 /* IndexViewController.swift */,
 				481152742007A9DB008F6109 /* Assets.xcassets */,
@@ -251,6 +254,7 @@
 				481152882007AF02008F6109 /* LoginViewController.swift in Sources */,
 				4811526E2007A9DB008F6109 /* AppDelegate.swift in Sources */,
 				481152862007AE85008F6109 /* IndexViewController.swift in Sources */,
+				487B09202010CFCA002F862A /* PlaceLocation.swift in Sources */,
 				4811528A2007AFBF008F6109 /* MapViewController.swift in Sources */,
 				4811528C2007B181008F6109 /* HistoryTableViewController.swift in Sources */,
 				4811528E2007C93E008F6109 /* CollectViewController.swift in Sources */,
