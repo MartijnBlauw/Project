@@ -17,9 +17,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBAction func unwindToMap(unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        // Show CollectViewController when pin tapped
+        mapView.delegate = self
+        
         // Get the current location of the user
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -45,12 +52,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     // Show CollectViewController when pin tapped
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "CollectSegue" {
-            let collectViewController = segue.destination as! CollectViewController
-            
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "CollectSegue" {
+//            let collectViewController = segue.destination as! CollectViewController
+//        }
+//    }
 }
 
 extension MapViewController: MKMapViewDelegate {

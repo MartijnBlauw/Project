@@ -195,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1d-Xp-GOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="115"/>
+            <point key="canvasLocation" x="1561" y="18"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="ei2-8p-pCr">
@@ -206,11 +206,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How does it work?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edi-Qq-R4K">
-                                <rect key="frame" x="62.5" y="84" width="250" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="FJs-xS-gek"/>
-                                    <constraint firstAttribute="height" constant="40" id="IfP-vq-xOQ"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="80" width="375" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -218,15 +214,17 @@
                         </subviews>
                         <color key="backgroundColor" red="0.15859908249999999" green="0.47007194819999998" blue="0.58128238350000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Rc0-q5-Cel" firstAttribute="trailing" secondItem="Edi-Qq-R4K" secondAttribute="trailing" id="BuE-fn-Moo"/>
                             <constraint firstItem="Edi-Qq-R4K" firstAttribute="centerX" secondItem="Bhq-Tu-GXC" secondAttribute="centerX" id="JFM-0B-5d2"/>
-                            <constraint firstItem="Edi-Qq-R4K" firstAttribute="top" secondItem="Rc0-q5-Cel" secondAttribute="top" constant="20" id="JrE-VN-QZS"/>
+                            <constraint firstItem="Edi-Qq-R4K" firstAttribute="top" secondItem="Rc0-q5-Cel" secondAttribute="top" constant="16" id="aM4-T4-fAB"/>
+                            <constraint firstItem="Edi-Qq-R4K" firstAttribute="leading" secondItem="Rc0-q5-Cel" secondAttribute="leading" id="iNh-lp-1bS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rc0-q5-Cel"/>
                     </view>
                     <navigationItem key="navigationItem" id="30x-2u-UTF">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="k9L-V6-nB0">
                             <connections>
-                                <segue destination="69x-W4-SpF" kind="unwind" unwindAction="unwindToIndexWithUnwindSegue:" id="31k-eO-CD6"/>
+                                <segue destination="69x-W4-SpF" kind="unwind" unwindAction="unwindToIndexWithUnwindSegue:" id="JhB-3a-FLG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -303,12 +301,38 @@
                     <view key="view" contentMode="scaleToFill" id="mfh-Zf-ovf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybw-uD-69C">
+                                <rect key="frame" x="139" y="285" width="96" height="96"/>
+                                <state key="normal" image="icons8-beer-96"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collect your credit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BO-SW-Aqx">
+                                <rect key="frame" x="0.0" y="80" width="375" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.15859908249999999" green="0.47007194819999998" blue="0.58128238350000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rcf-sf-XLL" firstAttribute="trailing" secondItem="1BO-SW-Aqx" secondAttribute="trailing" id="UgU-6u-zkg"/>
+                            <constraint firstItem="Ybw-uD-69C" firstAttribute="centerY" secondItem="mfh-Zf-ovf" secondAttribute="centerY" id="fye-D9-Bsl"/>
+                            <constraint firstItem="Ybw-uD-69C" firstAttribute="centerX" secondItem="mfh-Zf-ovf" secondAttribute="centerX" id="joi-Ro-aiz"/>
+                            <constraint firstItem="1BO-SW-Aqx" firstAttribute="leading" secondItem="rcf-sf-XLL" secondAttribute="leading" id="mRs-bL-e9i"/>
+                            <constraint firstItem="1BO-SW-Aqx" firstAttribute="top" secondItem="rcf-sf-XLL" secondAttribute="top" constant="16" id="vaA-Um-wZQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rcf-sf-XLL"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TKb-KF-A6W"/>
+                    <navigationItem key="navigationItem" id="TKb-KF-A6W">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="SuH-dp-8Jd">
+                            <connections>
+                                <segue destination="tFK-ld-xj5" kind="unwind" unwindAction="unwindToMapWithUnwindSegue:" id="Mfb-hI-Nbm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9r-wH-aUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tFK-ld-xj5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3094" y="-699"/>
         </scene>
@@ -372,6 +396,7 @@
     </scenes>
     <resources>
         <image name="Login" width="363" height="607"/>
+        <image name="icons8-beer-96" width="96" height="96"/>
         <image name="icons8-businessman-filled-50" width="25" height="25"/>
     </resources>
 </document>

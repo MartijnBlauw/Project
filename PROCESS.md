@@ -10,5 +10,4 @@ Vandaag heb ik geprobeerd om place pickers te krijgen bij alle GooglePlaces, dit
 
 # 18-01-2018
 
-Ik wilde vandaag de assistenten om hulp en advies vragen alleen door de strom kon dit niet. Nu ben ik Map Kit aan het gebruiken in plaats van GoogleMaps.  
-
+Ik wilde vandaag de assistenten om hulp en advies vragen alleen door de strom kon dit niet. Nu ben ik Map Kit aan het gebruiken in plaats van GoogleMaps. De app kan nu de huidige locatie van de gebruiker opvragen, als de gebruiker toestemming geeft. Door middel van MKAnnotation kan ik nu ook locaties toevoegen. Door middel van een JSON wil ik alle barretjes en cafés gaan toevoegen.
