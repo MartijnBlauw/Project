@@ -11,12 +11,15 @@ import MapKit
 import CoreLocation
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
-
+    
+    // MARK: Outlets
+    @IBOutlet weak var mapView: MKMapView!
+    
+    // MARK: Properties
     let locationManager = CLLocationManager()
     var location: CLLocationCoordinate2D? = nil
     
-    @IBOutlet weak var mapView: MKMapView!
-    
+    // MARK: Actions
     @IBAction func unwindToMap(unwindSegue: UIStoryboardSegue) {
         
     }
@@ -31,11 +34,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-        
+                
         // Annotation location (test)
-        let testLocationArray = PlaceLocation(title: "Groene Vlinder", name: "test", coordinate: CLLocationCoordinate2D(latitude: 52.355574, longitude: 4.893067))
-        mapView.addAnnotation(testLocationArray)
+//        let cafeAnnotation = CafesLocation(title: cafes.results.name, coordinate: cafes.results.location)
         
+//        mapView.addAnnotation(cafeAnnotation)
     }
     
     // Update the current location
@@ -51,12 +54,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         print(error)
     }
     
-    // Show CollectViewController when pin tapped
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "CollectSegue" {
-//            let collectViewController = segue.destination as! CollectViewController
-//        }
-//    }
 }
 
 extension MapViewController: MKMapViewDelegate {
