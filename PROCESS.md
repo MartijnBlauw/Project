@@ -16,3 +16,12 @@ Ik wilde vandaag de assistenten om hulp en advies vragen alleen door de strom ko
 
 Vandaag heb ik een geschikte API gevonden: https://api.eet.nu/venues?query=cafes. Ik heb de namen en de coördinaten ingeladen in de app. Hierna heb ik de coördinaten omgeschreven naar MLocationCoordinate2D, zodat ik de cafes op mijn map kan inladen via MKAnnotation. Eigenlijk wil ik dit voor morgenochtend af hebben, zodat ik kan beginnen met de verificatie.
 
+# 23-01-2018
+
+ - Voorheen werkte mijn app met een tab bar, maar dit bleek niet handig te zijn als je data wilt doorsturen naar een andere ViewController. Daarom heb ik de tab bar verwijderd uit mijn app en maak ik nu gebruik van buttons om zo met 1 klik de user door te sturen naar een nieuw scherm.
+
+- Als de user een credit collect dan wordt het aantal aangepast in de Index ViewController. Ook de 'free drink' button werkt nu, maar alleen als de user meer dan 10 credits heeft. In het geval dat dit niet zo is, krijgt de user een pop-up.
+
+- Het model waarin mijn data uit de API wordt ingeladen heb ik omgeschreven, zodat ik morgen deze data gemakkelijker kan inladen in mijn map.
+
+- Morgen wil de credits van de user gaan opslaan in Firebase, zodat dit continu wordt bijgehouden. Daarnaast wil de data van de API inladen in mijn map. Als dit gelukt is, kan ik beginnen met de functies waarmee de locatie van de user geverifieerd wordt met de locatie van de ingeladen cafés.

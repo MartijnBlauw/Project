@@ -11,8 +11,7 @@ import Firebase
 
 class LoginViewController: UIViewController {
 
-
-    // Outlets textfields
+    // MARK: Outlets
     @IBOutlet weak var textFieldLoginEmail: UITextField!
     @IBOutlet weak var textFieldLoginPassword: UITextField!
     
@@ -65,10 +64,6 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: "LoginSegue", sender: nil)
             }
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }
 

@@ -13,7 +13,6 @@ import MapKit
 class IndexViewController: UIViewController {
    
     // MARK: Outlets
-
     @IBOutlet weak var numberOfCreditsLabel: UILabel!
     
     // MARK: Properties
@@ -23,6 +22,21 @@ class IndexViewController: UIViewController {
     // Go back to Index View Controller
     @IBAction func unwindToIndex(unwindSegue: UIStoryboardSegue) {
     
+    }
+    
+    // Collect a free drink and show a message if the user has not enough credits
+    @IBAction func freeDrinkButtonTapped(_ sender: UIButton) {
+        guard let _ = numberOfCredits else { return }
+        if numberOfCredits! >= 10 {
+            numberOfCredits! -= 10
+        } else {
+            let alertController = UIAlertController(title: "Hey", message: "Sorry, you have not enought coins for a drink", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+        }
     }
     
     // Log out

@@ -58,7 +58,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         print(error)
     }
     
-    
     // Zoom to current location
 //    func centerMapOnLocation(location: CLLocation) {
 //        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
@@ -69,7 +68,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 }
 
 extension MapViewController: MKMapViewDelegate {
-    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         performSegue(withIdentifier: "CollectSegue", sender: nil)
     }
