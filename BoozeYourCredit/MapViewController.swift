@@ -18,6 +18,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: Properties
     let locationManager = CLLocationManager()
     var location: CLLocationCoordinate2D? = nil
+    var geofication = [CafesLocation]()
+//    let regionRadius: CLLocationDistance = 1000
     
     // MARK: Actions
     @IBAction func unwindToMap(unwindSegue: UIStoryboardSegue) {
@@ -26,19 +28,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         // Show CollectViewController when pin tapped
         mapView.delegate = self
+        mapView.showsUserLocation = true
         
         // Get the current location of the user
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-                
+
+    
         // Annotation location (test)
-//        let cafeAnnotation = CafesLocation(title: cafes.results.name, coordinate: cafes.results.location)
+        let cafeAnnotation = CafesLocation(title: "Groene Vlinder", coordinate: CLLocationCoordinate2D(latitude: 52.355528, longitude: 4.893067))
+        mapView.addAnnotation(cafeAnnotation)
         
-//        mapView.addAnnotation(cafeAnnotation)
     }
     
     // Update the current location
@@ -53,6 +57,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
+    
+    
+    // Zoom to current location
+//    func centerMapOnLocation(location: CLLocation) {
+//        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+//            regionRadius, regionRadius)
+//        mapView.setRegion(coordinateRegion, animated: true)
+//    }
     
 }
 

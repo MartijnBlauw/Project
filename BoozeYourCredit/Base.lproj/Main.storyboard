@@ -99,7 +99,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-Ec-ko4">
-                                <rect key="frame" x="140" y="488" width="95" height="50"/>
+                                <rect key="frame" x="140" y="537" width="95" height="50"/>
                                 <color key="backgroundColor" red="0.67209763600000005" green="0.31325517120000002" blue="0.3277646078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="T1P-oV-3hT"/>
@@ -110,13 +110,13 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask the barman for your free drink!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBN-LY-V4R">
-                                <rect key="frame" x="40" y="430.5" width="295" height="27.5"/>
+                                <rect key="frame" x="40" y="474.5" width="295" height="32.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Martijn!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz6-uU-xbo">
-                                <rect key="frame" x="75" y="50" width="225" height="50"/>
+                                <rect key="frame" x="75" y="94" width="225" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Vo5-In-dEE"/>
                                 </constraints>
@@ -125,19 +125,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of credits:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abN-9O-3Mz">
-                                <rect key="frame" x="40" y="240" width="152.5" height="20.5"/>
+                                <rect key="frame" x="40" y="284" width="152.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNx-vg-yTW">
-                                <rect key="frame" x="324" y="240" width="11" height="20.5"/>
+                                <rect key="frame" x="324" y="284" width="11" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6I8-bO-zR4">
-                                <rect key="frame" x="325" y="28" width="34" height="16"/>
+                                <rect key="frame" x="325" y="72" width="34" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="S3U-jX-iYp"/>
                                 </constraints>
@@ -150,7 +150,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKe-MU-Bz1">
-                                <rect key="frame" x="16" y="28" width="55" height="16"/>
+                                <rect key="frame" x="16" y="72" width="55" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="YRh-N0-iO9"/>
                                 </constraints>
@@ -192,6 +192,9 @@
                         <viewLayoutGuide key="safeArea" id="cnb-u4-Y7a"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="icons8-businessman-filled-50" selectedImage="icons8-businessman-filled-50" id="Ytd-Kq-lly"/>
+                    <connections>
+                        <outlet property="numberOfCreditsLabel" destination="TNx-vg-yTW" id="d4R-rq-9rR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1d-Xp-GOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -305,6 +308,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybw-uD-69C">
                                 <rect key="frame" x="139" y="285" width="96" height="96"/>
                                 <state key="normal" image="icons8-beer-96"/>
+                                <connections>
+                                    <action selector="collectButtonTapped:" destination="fs3-SY-ZRA" eventType="touchUpInside" id="aa3-Ix-Hwp"/>
+                                    <segue destination="dIl-lJ-7du" kind="show" identifier="indexSegue" id="nqf-38-bmB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collect your credit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BO-SW-Aqx">
                                 <rect key="frame" x="0.0" y="80" width="375" height="29"/>
@@ -399,4 +406,7 @@
         <image name="icons8-beer-96" width="96" height="96"/>
         <image name="icons8-businessman-filled-50" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="nqf-38-bmB"/>
+    </inferredMetricsTieBreakers>
 </document>

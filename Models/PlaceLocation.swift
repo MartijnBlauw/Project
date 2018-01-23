@@ -14,11 +14,17 @@ struct PlaceLocation: Codable {
     var name: String
     var geolocation: [String: Double]
     
-    var location: CLLocationCoordinate2D {
-        get {
-            return CLLocationCoordinate2D(latitude: geolocation["latitude"]!, longitude: geolocation["longitude"]!)
-        }
-    }
+//    var title: String? {
+//        get {
+//            return name
+//        }
+//    }
+    
+//    var coordinate: CLLocationCoordinate2D {
+//        get {
+//            return CLLocationCoordinate2D(latitude: geolocation["latitude"]!, longitude: geolocation["longitude"]!)
+//        }
+//    }
 }
 
 struct PlaceLocations: Codable {
