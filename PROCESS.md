@@ -14,7 +14,7 @@ Ik wilde vandaag de assistenten om hulp en advies vragen alleen door de strom ko
 
 # 22-01-2018
 
-Vandaag heb ik een geschikte API gevonden: https://api.eet.nu/venues?query=cafes. Ik heb de namen en de coördinaten ingeladen in de app. Hierna heb ik de coördinaten omgeschreven naar MLocationCoordinate2D, zodat ik de cafes op mijn map kan inladen via MKAnnotation. Eigenlijk wil ik dit voor morgenochtend af hebben, zodat ik kan beginnen met de verificatie.
+Vandaag heb ik een geschikte API gevonden: https://api.eet.nu/venues?query=cafes. Ik heb de namen en de coördinaten ingeladen in de app. Hierna heb ik de coördinaten omgeschreven naar MLocationCoordinate2D, zodat ik de cafes op mijn map kan inladen via MKAnnotation. 
 
 # 23-01-2018
 
@@ -24,4 +24,11 @@ Vandaag heb ik een geschikte API gevonden: https://api.eet.nu/venues?query=cafes
 
 - Het model waarin mijn data uit de API wordt ingeladen heb ik omgeschreven, zodat ik morgen deze data gemakkelijker kan inladen in mijn map.
 
-- Morgen wil de credits van de user gaan opslaan in Firebase, zodat dit continu wordt bijgehouden. Daarnaast wil de data van de API inladen in mijn map. Als dit gelukt is, kan ik beginnen met de functies waarmee de locatie van de user geverifieerd wordt met de locatie van de ingeladen cafés.
+# 24-01-2018
+
+De data uit mijn API: https://api.eet.nu/venues?query=cafes wordt nu van  de IndexViewController doorgestuurd naar de MapViewController. Verder heb ik functies toegevoegd zodat geo-fence werkt. Op het moment dat de user een regio binnen gaat, springt de MapViewController naar de CollectViewController, zodat hij of zij een credit kan innen. De data uit mijn API is nog steeds niet ingeladen op de kaart, omdat ik hier niet uit kom. Daarnaast ben ik bezig geweest met Firebase, zodat het aantal credits van de user wordt opgeslagen. Ook hier kwam ik niet uit.
+
+
+
+
+

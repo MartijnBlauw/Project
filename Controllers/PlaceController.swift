@@ -23,8 +23,8 @@ class PlaceController {
             let jsonDecoder = JSONDecoder()
             if let data = data, let cafes = try? jsonDecoder.decode(PlaceLocations.self, from: data) {
                 completion(cafes.results)
-                print(cafes)
-//                print(cafes.results.first?.location)
+                print(cafes.results.first?.coordinate)
+                print(cafes.results.first?.title)
             } else {
                 print("Either no data was returned, or data was not properly decoded.")
             }

@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class CollectViewController: UIViewController {
 
     // MARK: Properties
+    var ref = Database.database().reference(withPath: "numberOfCredits")
+    let userOnline = Auth.auth().currentUser?.email
     var numberOfCredits = 0
     
     // MARK: Actions
@@ -20,8 +23,12 @@ class CollectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Save the score of the user
+        guard let userOnline = userOnline else { return }
+        let credits = Credit(name: userOnline, credit: numberOfCredits)
+        self.ref.childByAutoId().setValue(credits.toAnyObject())
 
-        // Do any additional setup after loading the view.
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

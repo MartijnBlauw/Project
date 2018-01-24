@@ -127,7 +127,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNx-vg-yTW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNx-vg-yTW">
                                 <rect key="frame" x="0.0" y="208" width="375" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -143,7 +143,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CVH-hQ-Ldw" kind="show" identifier="helpSegue" id="Xs3-cb-C8w"/>
+                                    <segue destination="CVH-hQ-Ldw" kind="show" identifier="helpSegue" id="wpk-T3-X3g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKe-MU-Bz1">
@@ -166,7 +166,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qJs-cz-peh" kind="show" id="b3G-Gh-pdQ"/>
+                                    <segue destination="qJs-cz-peh" kind="show" identifier="mapSegue" id="b3G-Gh-pdQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Credits:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9d-01-OcG">
@@ -227,27 +227,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How does it work?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edi-Qq-R4K">
-                                <rect key="frame" x="0.0" y="80" width="375" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How does it work?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVs-zk-Voy">
+                                <rect key="frame" x="0.0" y="80" width="0.0" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufa-Id-sZB">
-                                <rect key="frame" x="165" y="323" width="44.5" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="q3V-2h-k9j">
+                                <rect key="frame" x="0.0" y="284" width="0.0" height="99.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufa-Id-sZB">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4f-02-Giu">
+                                        <rect key="frame" x="0.0" y="40" width="0.0" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQd-dQ-zJd">
+                                        <rect key="frame" x="0.0" y="79.5" width="0.0" height="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.15859908249999999" green="0.47007194819999998" blue="0.58128238350000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ufa-Id-sZB" firstAttribute="centerX" secondItem="Bhq-Tu-GXC" secondAttribute="centerX" id="2db-Jr-iQl"/>
-                            <constraint firstItem="Rc0-q5-Cel" firstAttribute="trailing" secondItem="Edi-Qq-R4K" secondAttribute="trailing" id="BuE-fn-Moo"/>
-                            <constraint firstItem="Edi-Qq-R4K" firstAttribute="centerX" secondItem="Bhq-Tu-GXC" secondAttribute="centerX" id="JFM-0B-5d2"/>
-                            <constraint firstItem="Ufa-Id-sZB" firstAttribute="centerY" secondItem="Bhq-Tu-GXC" secondAttribute="centerY" id="UJU-v4-oaG"/>
-                            <constraint firstItem="Edi-Qq-R4K" firstAttribute="top" secondItem="Rc0-q5-Cel" secondAttribute="top" constant="16" id="aM4-T4-fAB"/>
-                            <constraint firstItem="Edi-Qq-R4K" firstAttribute="leading" secondItem="Rc0-q5-Cel" secondAttribute="leading" id="iNh-lp-1bS"/>
+                            <constraint firstItem="fVs-zk-Voy" firstAttribute="centerX" secondItem="Bhq-Tu-GXC" secondAttribute="centerX" id="0L5-Nq-I8p"/>
+                            <constraint firstItem="fVs-zk-Voy" firstAttribute="top" secondItem="Rc0-q5-Cel" secondAttribute="top" constant="16" id="0dy-s6-SSx"/>
+                            <constraint firstItem="Rc0-q5-Cel" firstAttribute="trailing" secondItem="fVs-zk-Voy" secondAttribute="trailing" constant="16" id="B93-ZV-my7"/>
+                            <constraint firstItem="q3V-2h-k9j" firstAttribute="centerY" secondItem="Bhq-Tu-GXC" secondAttribute="centerY" id="Dyn-OI-Lc3"/>
+                            <constraint firstItem="q3V-2h-k9j" firstAttribute="leading" secondItem="Rc0-q5-Cel" secondAttribute="leading" constant="16" id="NQE-8p-xXE"/>
+                            <constraint firstItem="Rc0-q5-Cel" firstAttribute="trailing" secondItem="q3V-2h-k9j" secondAttribute="trailing" constant="16" id="rQE-Zb-QNb"/>
+                            <constraint firstItem="fVs-zk-Voy" firstAttribute="leading" secondItem="Rc0-q5-Cel" secondAttribute="leading" constant="16" id="swd-bO-oku"/>
+                            <constraint firstItem="q3V-2h-k9j" firstAttribute="top" secondItem="fVs-zk-Voy" secondAttribute="bottom" constant="175" id="v7M-Rp-eZu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rc0-q5-Cel"/>
                     </view>
@@ -259,13 +278,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="helpTextLabel" destination="Ufa-Id-sZB" id="usk-J5-DJt"/>
+                        <outlet property="helpLabel1" destination="Ufa-Id-sZB" id="6xk-rA-awa"/>
+                        <outlet property="helpLabel2" destination="F4f-02-Giu" id="cRi-QX-0ri"/>
+                        <outlet property="helpLabel3" destination="wQd-dQ-zJd" id="zbl-dR-DBz"/>
+                        <outlet property="helpStackView" destination="q3V-2h-k9j" id="dUU-Or-opZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlC-pH-pRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="69x-W4-SpF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2463" y="37"/>
+            <point key="canvasLocation" x="2461.5999999999999" y="36.431784107946029"/>
         </scene>
         <!--History Table View Controller-->
         <scene sceneID="xfL-d8-69N">
@@ -443,6 +465,6 @@
         <image name="icons8-google-maps-96" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nqf-38-bmB"/>
+        <segue reference="eaN-9s-G1j"/>
     </inferredMetricsTieBreakers>
 </document>
