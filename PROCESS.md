@@ -28,7 +28,11 @@ Vandaag heb ik een geschikte API gevonden: https://api.eet.nu/venues?query=cafes
 
 De data uit mijn API: https://api.eet.nu/venues?query=cafes wordt nu van  de IndexViewController doorgestuurd naar de MapViewController. Verder heb ik functies toegevoegd zodat geo-fence werkt. Op het moment dat de user een regio binnen gaat, springt de MapViewController naar de CollectViewController, zodat hij of zij een credit kan innen. De data uit mijn API is nog steeds niet ingeladen op de kaart, omdat ik hier niet uit kom. Daarnaast ben ik bezig geweest met Firebase, zodat het aantal credits van de user wordt opgeslagen. Ook hier kwam ik niet uit.
 
+# 25 - 01 -2018
 
+Vandaag heb ik de data van de API ingeladen op de map. Op het moment dat de user een regio binnen loopt, gaat zijn scherm automatisch door naar de CollectViewController. De timer begint dan direct te lopen en zodra die onder de 0 seconde is, krijgt de user 1 credit erbij in zijn portfolio. 
+
+<img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/IndexViewController.png" width="250"><img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/MapViewController.png" width="250"><img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/CollectViewController.png" width="250">
 
 
 
