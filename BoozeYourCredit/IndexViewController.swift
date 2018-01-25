@@ -64,7 +64,8 @@ class IndexViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Send the data of the API to the next screen
         if segue.identifier == "mapSegue" {
-            let mapViewController = segue.destination as! MapViewController
+            let desti = segue.destination as! UINavigationController
+            let mapViewController = desti.topViewController as! MapViewController
             mapViewController.cafes = cafes
         }
     }
