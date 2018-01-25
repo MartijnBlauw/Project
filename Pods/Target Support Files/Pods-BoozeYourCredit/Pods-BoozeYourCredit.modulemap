@@ -1,0 +1,6 @@
+framework module Pods_BoozeYourCredit {
+  umbrella header "Pods-BoozeYourCredit-umbrella.h"
+
+  export *
+  module * { export * }
+}
