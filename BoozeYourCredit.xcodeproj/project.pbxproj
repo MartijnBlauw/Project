@@ -19,9 +19,9 @@
 		4811528E2007C93E008F6109 /* CollectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811528D2007C93E008F6109 /* CollectViewController.swift */; };
 		481152902007CB4F008F6109 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811528F2007CB4F008F6109 /* HelpViewController.swift */; };
 		486B30D42018A10B00F8B8AB /* CreditData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486B30D32018A10B00F8B8AB /* CreditData.swift */; };
-		487B09202010CFCA002F862A /* PlaceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487B091F2010CFCA002F862A /* PlaceLocation.swift */; };
 		48ADF9F42015EFEB003AE4AC /* PlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ADF9F32015EFEB003AE4AC /* PlaceController.swift */; };
-		48ADF9FB201641FA003AE4AC /* CafesLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ADF9FA201641FA003AE4AC /* CafesLocation.swift */; };
+		48DD657C201A941300D92AC0 /* AnnotationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD657B201A941300D92AC0 /* AnnotationData.swift */; };
+		48DD6580201A94E400D92AC0 /* CafesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD657F201A94E400D92AC0 /* CafesData.swift */; };
 		D94ED336FE26D0AF929FCA06 /* Pods_BoozeYourCredit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A516AF5993C2BBC255551B1C /* Pods_BoozeYourCredit.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,9 +41,9 @@
 		4811528D2007C93E008F6109 /* CollectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectViewController.swift; sourceTree = "<group>"; };
 		4811528F2007CB4F008F6109 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		486B30D32018A10B00F8B8AB /* CreditData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditData.swift; sourceTree = "<group>"; };
-		487B091F2010CFCA002F862A /* PlaceLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceLocation.swift; sourceTree = "<group>"; };
 		48ADF9F32015EFEB003AE4AC /* PlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceController.swift; sourceTree = "<group>"; };
-		48ADF9FA201641FA003AE4AC /* CafesLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesLocation.swift; sourceTree = "<group>"; };
+		48DD657B201A941300D92AC0 /* AnnotationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationData.swift; sourceTree = "<group>"; };
+		48DD657F201A94E400D92AC0 /* CafesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CafesData.swift; path = /Users/martijnblauw/Desktop/Project/Models/CafesData.swift; sourceTree = "<absolute>"; };
 		9BD9B0858087BA315E0EF14A /* Pods-BoozeYourCredit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoozeYourCredit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoozeYourCredit/Pods-BoozeYourCredit.debug.xcconfig"; sourceTree = "<group>"; };
 		A516AF5993C2BBC255551B1C /* Pods_BoozeYourCredit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoozeYourCredit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,9 +101,9 @@
 		48ADF9F62015F007003AE4AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				48DD657F201A94E400D92AC0 /* CafesData.swift */,
+				48DD657B201A941300D92AC0 /* AnnotationData.swift */,
 				4800C3B5201A080100500249 /* RegionData.swift */,
-				48ADF9FA201641FA003AE4AC /* CafesLocation.swift */,
-				487B091F2010CFCA002F862A /* PlaceLocation.swift */,
 				486B30D32018A10B00F8B8AB /* CreditData.swift */,
 			);
 			path = Models;
@@ -276,12 +276,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				481152902007CB4F008F6109 /* HelpViewController.swift in Sources */,
-				48ADF9FB201641FA003AE4AC /* CafesLocation.swift in Sources */,
 				481152882007AF02008F6109 /* LoginViewController.swift in Sources */,
+				48DD6580201A94E400D92AC0 /* CafesData.swift in Sources */,
 				4811526E2007A9DB008F6109 /* AppDelegate.swift in Sources */,
+				48DD657C201A941300D92AC0 /* AnnotationData.swift in Sources */,
 				486B30D42018A10B00F8B8AB /* CreditData.swift in Sources */,
 				481152862007AE85008F6109 /* IndexViewController.swift in Sources */,
-				487B09202010CFCA002F862A /* PlaceLocation.swift in Sources */,
 				4811528A2007AFBF008F6109 /* MapViewController.swift in Sources */,
 				4800C3B6201A080100500249 /* RegionData.swift in Sources */,
 				4811528E2007C93E008F6109 /* CollectViewController.swift in Sources */,

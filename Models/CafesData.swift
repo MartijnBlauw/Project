@@ -1,9 +1,8 @@
 //
-//  PlaceLocation.swift
-//  BoozeYourCredit
+//  CafesData.swift
 //
-//  Created by Martijn Blauw on 18-01-18.
-//  Copyright © 2018 Martijn Blauw. All rights reserved.
+//
+//  Created by Martijn Blauw on 25-01-18.
 //
 
 import Foundation

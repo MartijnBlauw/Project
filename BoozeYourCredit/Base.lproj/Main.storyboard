@@ -116,7 +116,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Martijn!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz6-uU-xbo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz6-uU-xbo">
                                 <rect key="frame" x="75" y="50" width="225" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Vo5-In-dEE"/>
@@ -339,7 +339,6 @@
                                 <state key="normal" image="icons8-beer-96"/>
                                 <connections>
                                     <action selector="collectButtonTapped:" destination="fs3-SY-ZRA" eventType="touchUpInside" id="aa3-Ix-Hwp"/>
-                                    <segue destination="dIl-lJ-7du" kind="presentation" identifier="indexSegue" id="nqf-38-bmB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collect your credit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BO-SW-Aqx">
@@ -446,7 +445,4 @@
         <image name="icons8-beer-96" width="96" height="96"/>
         <image name="icons8-businessman-filled-50" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="nqf-38-bmB"/>
-    </inferredMetricsTieBreakers>
 </document>

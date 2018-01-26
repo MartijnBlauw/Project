@@ -14,11 +14,13 @@ struct Credit {
     let key: String
     let ref: DatabaseReference?
     let credit: Int
+    let userid: String
     
-    init(name: String, credit: Int, key: String = "") {
+    init(credit: Int, key: String = "", userid: String) {
         self.key = key
         self.ref = nil
         self.credit = credit
+        self.userid = userid
     }
     
     init(snapshot: DataSnapshot){
@@ -26,11 +28,13 @@ struct Credit {
         let snapshotValue = snapshot.value as! [String: AnyObject]
         ref = snapshot.ref
         credit = snapshotValue["credit"] as! Int
+        userid = snapshotValue["userid"] as! String
     }
     
     func toAnyObject() -> Any {
         return [
-            "credit": credit
+            "credit": credit,
+            "userid": userid
         ]
     }
 }

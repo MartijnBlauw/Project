@@ -1,8 +1,8 @@
 //
-//  CafesLocation.swift
+//  AnnotationData.swift
 //  BoozeYourCredit
 //
-//  Created by Martijn Blauw on 22-01-18.
+//  Created by Martijn Blauw on 25-01-18.
 //  Copyright © 2018 Martijn Blauw. All rights reserved.
 //
 
@@ -21,4 +21,3 @@ class CafesLocation: NSObject, MKAnnotation {
         super.init()
     }
 }
-

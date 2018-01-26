@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
@@ -19,7 +19,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var cafes: [PlaceLocation]?
     var locationManager : CLLocationManager = CLLocationManager()
     var location: CLLocationCoordinate2D? = nil
-
+    var isInRegion: Bool = false
     
     // MARK: Actions
     @IBAction func unwindToMap(unwindSegue: UIStoryboardSegue) {
@@ -40,7 +40,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if let cafes = cafes {
             for cafe in cafes {
                 let cafeAnnotation = CafesLocation(title: cafe.title!, coordinate: cafe.coordinate)
-                mapView.addAnnotation(cafeAnnotation)
+                self.mapView.addAnnotation(cafeAnnotation)
             }
         }
     }
@@ -82,7 +82,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     // Start monitoring
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
         print("Start monitoring")
+        isInRegion = true
     }
+    
     
     // Enter the region
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
@@ -92,12 +94,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     // Exit the region
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         print("Did exit")
+        isInRegion = false
     }
     
     // Check if the user is still in the region
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
         if state == CLRegionState.inside {
             print("Still in the region")
+            performSegue(withIdentifier: "CollectSegue", sender: nil)
         }
     }
     
@@ -115,8 +119,38 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     
     // When pin tapped, go to next screen
-    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        performSegue(withIdentifier: "CollectSegue", sender: nil)
+//    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+//        performSegue(withIdentifier: "CollectSegue", sender: nil)
+//    }
+}
+
+extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        guard let annotation = annotation as? CafesLocation else { return nil }
+        let identifier = "marker"
+        var view: MKMarkerAnnotationView
+
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            as? MKMarkerAnnotationView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+        } else {
+            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        return view
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl) {
+        if isInRegion == true {
+            performSegue(withIdentifier: "CollectSegue", sender: nil)
+        } else {
+            return
+        }
     }
 }
 

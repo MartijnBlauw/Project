@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import MapKit
 
 class IndexViewController: UIViewController {
    
@@ -16,7 +15,9 @@ class IndexViewController: UIViewController {
     @IBOutlet weak var numberOfCreditsLabel: UILabel!
     
     // MARK: Properties
-    var numberOfCredits: Int?
+    var ref = Database.database().reference(withPath: "numberOfCredits")
+    let userOnline = Auth.auth().currentUser
+    var currentCoins: Int?
     var cafes = [PlaceLocation]()
     
     // Go back to Index View Controller
@@ -24,18 +25,24 @@ class IndexViewController: UIViewController {
     
     }
     
-    // Collect a free drink and show a message if the user has not enough credits
+    // Collect a free drink and show a message if the user has not enough credits (negative numbers)
     @IBAction func freeDrinkButtonTapped(_ sender: UIButton) {
-        guard let _ = numberOfCredits else { return }
-        if numberOfCredits! >= 10 {
-            numberOfCredits! -= 10
-        } else {
-            let alertController = UIAlertController(title: "Hey", message: "Sorry, you have not enought coins for a drink", preferredStyle: .alert)
-            
-            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            
-            present(alertController, animated: true, completion: nil)
+        guard let userid = userOnline?.uid  else { return }
+        
+        let coinRef = ref.child(userid).child("credit")
+        
+        coinRef.observeSingleEvent(of: .value) { (snapshot) in
+            if snapshot.value != nil {
+                self.currentCoins = snapshot.value as? Int
+                coinRef.setValue(self.currentCoins! - 10)
+            } else {
+                let alertController = UIAlertController(title: "Hey", message: "Sorry, you have not enought coins for a drink", preferredStyle: .alert)
+    
+                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(defaultAction)
+    
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
     }
     
@@ -56,13 +63,23 @@ class IndexViewController: UIViewController {
         }
         
         // Display number of credits
-        guard let numberOfCredits = numberOfCredits else { return }
-        numberOfCreditsLabel.text = "\(numberOfCredits)"
+        guard let userid = userOnline?.uid  else { return }
         
+        let coinRef = ref.child(userid).child("credit")
+        
+        coinRef.observe(.value) { snapshot in
+            self.currentCoins = snapshot.value as? Int
+            if self.currentCoins != nil {
+                let currentCoins = String(describing: self.currentCoins!)
+                self.numberOfCreditsLabel.text = currentCoins
+            } else {
+                self.numberOfCreditsLabel.text = "0"
+            }
+        }
     }
     
+    // Send the data of the API to the next screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Send the data of the API to the next screen
         if segue.identifier == "mapSegue" {
             let desti = segue.destination as! UINavigationController
             let mapViewController = desti.topViewController as! MapViewController
