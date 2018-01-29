@@ -41,4 +41,4 @@ De login, de kaart, de mogelijkheid om punten te sparen en het overzicht waarin 
 -	Het verifiëren met het café (de locatie). 
 -	Inwisselen van de gespaarde punten. Het zou kunnen door middel van een QR-code, maar het zou ook kunnen door het personeel simpelweg op een knop te laten drukken waardoor er een bepaald aantal punten van je tegoed afgehaald wordt. 
 
-
+[![BCH compliance](https://bettercodehub.com/edge/badge/MartijnBlauw/Project?branch=master)](https://bettercodehub.com/)
