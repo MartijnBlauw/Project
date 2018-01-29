@@ -36,7 +36,13 @@ Vandaag heb ik de data van de API ingeladen op de map. Op het moment dat de user
 
 # 26-01-2018
 
-De timer heb ik omgezet van secondes naar uren, minuten en secondes. Ik heb de button op de CollectViewController verbonden met Firebase, zodat bij elke klik het aantal credits toeneemt met 1. Het aantal credits wordt op de IndexViewController ingeladen vanuit Firebase, nu kan de gebruiker zijn of haar saldo checken. De button om een gratis drankje te krijgen is ook verbonden met Firebase. Alleen nu kan het saldo negatief worden, hier moet ik nog een oplossing voor vinden. 
+De timer heb ik omgezet van secondes naar uren, minuten en secondes. Ik heb de button op de CollectViewController verbonden met Firebase, zodat bij elke klik het aantal credits toeneemt met 1. Het aantal credits wordt op de IndexViewController ingeladen vanuit Firebase, nu kan de gebruiker zijn of haar saldo checken. De button om een gratis drankje te krijgen is ook verbonden met Firebase. Alleen nu kan het saldo negatief worden, hier moet ik nog een oplossing voor vinden.
+
+# 29-01-2018
+
+Het saldo van de gebruiker kan niet meer negatief worden. Vandaag moest ik de markers van de cafés koppelen aan de locatie van de gebruiker, om zo te verifiëren dat de gebruiker daadwerkelijk op de locatie van het café is. Eerst wilde ik dit via geofence doen, maar Marijn gaf vandaag aan dat dat niet handig is. In de calloutAccessoryControlTapped functie worden nu de coordinaten van het desbetreffende café opgehaald. Deze worden vergeleken met de coordinaten van de gebruiker en de afstand tussen deze twee locaties wordt berekend. Als de afstand onder de 5 meter is, dan wordt de gebruiker doorgestuurd naar de CollectViewController en kan hij of zij een credit collecten als de timer op 0 seconden staat. De geofence functies heb ik volledig uit mijn code gehaald.
+
+
 
 
 

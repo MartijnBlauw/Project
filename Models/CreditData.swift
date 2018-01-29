@@ -15,7 +15,7 @@ struct Credit {
     let userid: String
     let credit: Int
     
-    init(credit: Int, key: String = "", userid: String) {
+    init(userid: String, credit: Int) {
         self.ref = nil
         self.userid = userid
         self.credit = credit

@@ -11,9 +11,10 @@ import UIKit
 class HelpViewController: UIViewController {
 
     // MARK: Outlets
-    @IBOutlet weak var helpStackView: UIStackView!
+
     @IBOutlet weak var helpLabel1: UILabel!
     @IBOutlet weak var helpLabel2: UILabel!
+
     @IBOutlet weak var helpLabel3: UILabel!
     
     override func viewDidLoad() {

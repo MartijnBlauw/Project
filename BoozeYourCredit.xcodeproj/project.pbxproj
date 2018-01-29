@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4800C3B6201A080100500249 /* RegionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4800C3B5201A080100500249 /* RegionData.swift */; };
 		4811526E2007A9DB008F6109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811526D2007A9DB008F6109 /* AppDelegate.swift */; };
 		481152732007A9DB008F6109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481152712007A9DB008F6109 /* Main.storyboard */; };
 		481152752007A9DB008F6109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481152742007A9DB008F6109 /* Assets.xcassets */; };
@@ -27,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		1F845718DE4AEF6C7E22AFFC /* Pods-BoozeYourCredit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoozeYourCredit.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoozeYourCredit/Pods-BoozeYourCredit.release.xcconfig"; sourceTree = "<group>"; };
-		4800C3B5201A080100500249 /* RegionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionData.swift; sourceTree = "<group>"; };
 		4811526A2007A9DB008F6109 /* BoozeYourCredit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoozeYourCredit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4811526D2007A9DB008F6109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		481152722007A9DB008F6109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			children = (
 				48DD657F201A94E400D92AC0 /* CafesData.swift */,
 				48DD657B201A941300D92AC0 /* AnnotationData.swift */,
-				4800C3B5201A080100500249 /* RegionData.swift */,
 				486B30D32018A10B00F8B8AB /* CreditData.swift */,
 			);
 			path = Models;
@@ -283,7 +280,6 @@
 				486B30D42018A10B00F8B8AB /* CreditData.swift in Sources */,
 				481152862007AE85008F6109 /* IndexViewController.swift in Sources */,
 				4811528A2007AFBF008F6109 /* MapViewController.swift in Sources */,
-				4800C3B6201A080100500249 /* RegionData.swift in Sources */,
 				4811528E2007C93E008F6109 /* CollectViewController.swift in Sources */,
 				48ADF9F42015EFEB003AE4AC /* PlaceController.swift in Sources */,
 			);

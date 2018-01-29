@@ -20,9 +20,13 @@ class IndexViewController: UIViewController {
     var currentCoins: Int?
     var cafes = [PlaceLocation]()
     
+    @IBAction func searchButtonTapped(_ sender: UIButton) {
+        
+    }
+    
     // Go back to Index View Controller
     @IBAction func unwindToIndex(unwindSegue: UIStoryboardSegue) {
-    
+        
     }
     
     // Collect a free drink and show a message if the user has not enough credits (negative numbers)
@@ -32,7 +36,7 @@ class IndexViewController: UIViewController {
         let coinRef = ref.child(userid).child("credit")
         
         coinRef.observeSingleEvent(of: .value) { (snapshot) in
-            if snapshot.value != nil {
+            if snapshot.value != nil && (snapshot.value as! Int) >= 10 {
                 self.currentCoins = snapshot.value as? Int
                 coinRef.setValue(self.currentCoins! - 10)
             } else {
@@ -62,7 +66,11 @@ class IndexViewController: UIViewController {
             }
         }
         
-        // Display number of credits
+        updateSaldo()
+    }
+    
+    // Display number of credits
+    func updateSaldo() {
         guard let userid = userOnline?.uid  else { return }
         
         let coinRef = ref.child(userid).child("credit")
@@ -81,8 +89,8 @@ class IndexViewController: UIViewController {
     // Send the data of the API to the next screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mapSegue" {
-            let desti = segue.destination as! UINavigationController
-            let mapViewController = desti.topViewController as! MapViewController
+            let destination = segue.destination as! UINavigationController
+            let mapViewController = destination.topViewController as! MapViewController
             mapViewController.cafes = cafes
         }
     }

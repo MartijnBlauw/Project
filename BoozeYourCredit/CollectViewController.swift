@@ -18,7 +18,7 @@ class CollectViewController: UIViewController {
     var ref = Database.database().reference(withPath: "numberOfCredits")
     let userOnline = Auth.auth().currentUser
     var currentCoins: Int?
-    var seconds = 120
+    var seconds = 5
     var timer = Timer()
 
     // MARK: Actions
