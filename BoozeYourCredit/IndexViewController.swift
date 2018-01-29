@@ -36,7 +36,7 @@ class IndexViewController: UIViewController {
                 self.currentCoins = snapshot.value as? Int
                 coinRef.setValue(self.currentCoins! - 10)
             } else {
-                let alertController = UIAlertController(title: "Hey", message: "Sorry, you have not enought coins for a drink", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Hey", message: "Sorry, you have not enough coins for a drink", preferredStyle: .alert)
     
                 let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(defaultAction)

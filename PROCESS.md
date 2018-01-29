@@ -34,5 +34,9 @@ Vandaag heb ik de data van de API ingeladen op de map. Op het moment dat de user
 
 <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/IndexViewController.png" width="250"><img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/MapViewController.png" width="250"><img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/CollectViewController.png" width="250">
 
+# 26-01-2018
+
+De timer heb ik omgezet van secondes naar uren, minuten en secondes. Ik heb de button op de CollectViewController verbonden met Firebase, zodat bij elke klik het aantal credits toeneemt met 1. Het aantal credits wordt op de IndexViewController ingeladen vanuit Firebase, nu kan de gebruiker zijn of haar saldo checken. De button om een gratis drankje te krijgen is ook verbonden met Firebase. Alleen nu kan het saldo negatief worden, hier moet ik nog een oplossing voor vinden. 
+
 
 

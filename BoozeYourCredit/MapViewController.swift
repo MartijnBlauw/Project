@@ -17,8 +17,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: Properties
     var cafes: [PlaceLocation]?
-    var locationManager : CLLocationManager = CLLocationManager()
-    var location: CLLocationCoordinate2D? = nil
+    var locationManager = CLLocationManager()
     var isInRegion: Bool = false
     
     // MARK: Actions
@@ -28,13 +27,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        // Show CollectViewController when pin tapped
+
         self.mapView.delegate = self
         
         // Get the current location of the user
-        self.locationManager.delegate = self
-        self.locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
         
         // Load the markers on the map
         if let cafes = cafes {
@@ -66,8 +66,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let overlayRenderer : MKCircleRenderer = MKCircleRenderer(overlay: overlay);
         overlayRenderer.lineWidth = 3.0
-        overlayRenderer.strokeColor = UIColor(red: 0.52, green: 0.18, blue: 0.87, alpha: 1.0)
-        overlayRenderer.fillColor = UIColor(red: 0.52, green: 0.18, blue: 0.87, alpha: 0.7)
+        overlayRenderer.strokeColor = UIColor(red: 0, green: 0.4863, blue: 0.6471, alpha: 1.0)
+        overlayRenderer.fillColor = UIColor(red: 0, green: 0.4863, blue: 0.6471, alpha: 0.7)
         
         return overlayRenderer
     }
@@ -101,27 +101,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
         if state == CLRegionState.inside {
             print("Still in the region")
-            performSegue(withIdentifier: "CollectSegue", sender: nil)
         }
     }
     
-    // Update the current location
+    // Update the current location and zoom in on current location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        for currentLocation in locations {
-            let coordinate = currentLocation.coordinate
-            location = coordinate
-        }
+        let userLocation: CLLocation = locations[0] as CLLocation
+
+        let coordinations = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude,longitude: userLocation.coordinate.longitude)
+        let span = MKCoordinateSpanMake(0.8, 0.8)
+        let region = MKCoordinateRegion(center: coordinations, span: span)
+        
+        mapView.setRegion(region, animated: true)
     }
     
     // Update location failed, give an error
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
-    
-    // When pin tapped, go to next screen
-//    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-//        performSegue(withIdentifier: "CollectSegue", sender: nil)
-//    }
 }
 
 extension MapViewController: MKMapViewDelegate {
