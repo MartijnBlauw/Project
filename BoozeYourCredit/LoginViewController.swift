@@ -17,6 +17,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var textFieldLoginEmail: UITextField!
     @IBOutlet weak var textFieldLoginPassword: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+            }
+        }
+    }
+    
     // Register
     @IBAction func registerButton(_ sender: UIButton) {
         let alert = UIAlertController(title: "Register",
@@ -27,9 +37,11 @@ class LoginViewController: UIViewController {
             let emailField = alert.textFields![0]
             let passwordField = alert.textFields![1]
 
-            Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { user, error in
+            Auth.auth().createUser(withEmail: emailField.text!,
+                                   password: passwordField.text!) { user, error in
                 if error == nil {
-                    Auth.auth().signIn(withEmail: self.textFieldLoginEmail.text!, password: self.textFieldLoginPassword.text!)
+                    Auth.auth().signIn(withEmail: self.textFieldLoginEmail.text!,
+                                       password: self.textFieldLoginPassword.text!)
                 }
             }
         }
@@ -56,16 +68,6 @@ class LoginViewController: UIViewController {
     @IBAction func loginButton(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: textFieldLoginEmail.text!,
                            password: textFieldLoginPassword.text!)
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        Auth.auth().addStateDidChangeListener() { auth, user in
-            if user != nil {
-                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
-            }
-        }
     }
 }
 

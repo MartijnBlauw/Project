@@ -152,7 +152,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qJs-cz-peh" kind="show" identifier="mapSegue" id="uJv-cv-V2z"/>
+                                    <action selector="searchButtonTapped:" destination="dIl-lJ-7du" eventType="touchUpInside" id="HMU-AD-tdL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9d-01-OcG">
@@ -211,7 +211,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="icons8-businessman-filled-50" selectedImage="icons8-businessman-filled-50" id="Ytd-Kq-lly"/>
                     <connections>
+                        <outlet property="freeDrinkButton" destination="Quc-Ec-ko4" id="p0c-Mu-W4E"/>
                         <outlet property="numberOfCreditsLabel" destination="TNx-vg-yTW" id="JIb-jD-PJm"/>
+                        <outlet property="searchButton" destination="ypt-VD-Vt0" id="8of-34-66m"/>
+                        <segue destination="qJs-cz-peh" kind="show" identifier="mapSegue" id="pQB-4r-M56"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1d-Xp-GOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -394,6 +397,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectButton" destination="Ybw-uD-69C" id="HYF-lf-02O"/>
                         <outlet property="timerLabel" destination="k9c-NS-pJT" id="FdC-Aj-b5v"/>
                     </connections>
                 </viewController>

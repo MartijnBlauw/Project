@@ -15,23 +15,32 @@ class IndexViewController: UIViewController {
    
     // MARK: Outlets
     @IBOutlet weak var numberOfCreditsLabel: UILabel!
+    @IBOutlet weak var freeDrinkButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
     
     // MARK: Properties
+    var cafes = [PlaceLocation]()
     var ref = Database.database().reference(withPath: "numberOfCredits")
     let userOnline = Auth.auth().currentUser
     var currentCoins: Int?
-    var cafes = [PlaceLocation]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        freeDrinkButton.layer.cornerRadius = 8
+        searchButton.layer.cornerRadius = 8
         
+        updateSaldo()
+    }
+    
+    @IBAction func searchButtonTapped(_ sender: UIButton) {
         PlaceController.shared.loadCafes() { (cafes) in
             if let cafes = cafes {
                 self.cafes = cafes
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "mapSegue", sender: self)
+                }
             }
         }
-        
-        updateSaldo()
     }
     
     // Go back to Index View Controller

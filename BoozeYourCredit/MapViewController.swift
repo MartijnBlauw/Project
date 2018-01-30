@@ -21,12 +21,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var cafes: [PlaceLocation]?
     var userLocation: CLLocation?
     var locationManager = CLLocationManager()
-            
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.mapView.delegate = self
-        
+
         // Get the current location of the user
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -101,7 +101,7 @@ extension MapViewController: MKMapViewDelegate {
         let getLat: CLLocationDegrees = markerCoordinates!.latitude
         let getLon: CLLocationDegrees = markerCoordinates!.longitude
         let convertedCoordinates: CLLocation = CLLocation(latitude: getLat, longitude: getLon)
-    
+
         // Calculate distance between the location of the user and the cafe
         if let userLocation = self.userLocation {
             let distance: CLLocationDistance = convertedCoordinates.distance(from: userLocation)

@@ -15,6 +15,7 @@ class CollectViewController: UIViewController {
 
     // MARK: Outlets
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var collectButton: UIButton!
     
     // MARK: Properties
     var ref = Database.database().reference(withPath: "numberOfCredits")
@@ -25,6 +26,8 @@ class CollectViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectButton.layer.cornerRadius = 8
         
         // Trigger the timer
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer),
