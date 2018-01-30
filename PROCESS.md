@@ -42,7 +42,6 @@ De timer heb ik omgezet van secondes naar uren, minuten en secondes. Ik heb de b
 
 Het saldo van de gebruiker kan niet meer negatief worden. Vandaag moest ik de markers van de cafés koppelen aan de locatie van de gebruiker, om zo te verifiëren dat de gebruiker daadwerkelijk op de locatie van het café is. Eerst wilde ik dit via geofence doen, maar Marijn gaf vandaag aan dat dat niet handig is. In de calloutAccessoryControlTapped functie worden nu de coordinaten van het desbetreffende café opgehaald. Deze worden vergeleken met de coordinaten van de gebruiker en de afstand tussen deze twee locaties wordt berekend. Als de afstand onder de 5 meter is, dan wordt de gebruiker doorgestuurd naar de CollectViewController en kan hij of zij een credit collecten als de timer op 0 seconden staat. De geofence functies heb ik volledig uit mijn code gehaald.
 
+# 30-01-2018
 
-
-
-
+In mijn app gebruik ik meerdere malen een UIAlertController. Vandaag heb ik daarvoor een static shared geschreven, zodat ik niet elke keer dezelfde code gebruik. Verder ben ik bezig geweest met het design van mijn app. Onderaan elke scherm heb ik het logo van mijn app geplaatst en de hoeken van mijn buttons heb ik rond gemaakt. Daarnaast ziet de gebruiker nu de naam van het café staan op de CollectViewController. 

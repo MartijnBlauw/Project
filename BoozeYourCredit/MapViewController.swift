@@ -19,8 +19,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     // MARK: Properties
     var cafes: [PlaceLocation]?
-    var userLocation: CLLocation?
     var locationManager = CLLocationManager()
+    var userLocation: CLLocation?
+    var cafeName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,12 +66,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         print(error)
     }
     
-    // Function for a message
-    func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Send name of the cafe to the next screen
+        if segue.identifier == "CollectSegue" {
+            let destination = segue.destination as! UINavigationController
+            let collectViewController = destination.topViewController as! CollectViewController
+            collectViewController.cafeName = cafeName
+        }
     }
 }
 
@@ -106,11 +108,13 @@ extension MapViewController: MKMapViewDelegate {
         if let userLocation = self.userLocation {
             let distance: CLLocationDistance = convertedCoordinates.distance(from: userLocation)
             if distance < 5 {
+            self.cafeName = view.annotation?.title!
             performSegue(withIdentifier: "CollectSegue", sender: nil)
             } else {
-                showAlert(title: "Hi!", message: "Sorry, you are not close enough to this café")
+                present(ShowAlertController.shared.showAlert(title: "Hi!",
+                                                             message: "Sorry, you are not close enough to this café"),
+                                                                animated: true)
             }
         }
     }
 }
-

@@ -14,6 +14,7 @@ import Firebase
 class CollectViewController: UIViewController {
 
     // MARK: Outlets
+    @IBOutlet weak var cafeNameLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var collectButton: UIButton!
     
@@ -23,9 +24,14 @@ class CollectViewController: UIViewController {
     var currentCoins: Int?
     var seconds = 5
     var timer = Timer()
-
+    var cafeName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Display name of the cafe
+        guard let cafeName = cafeName else { return }
+        cafeNameLabel.text = "\(cafeName)"
         
         collectButton.layer.cornerRadius = 8
         
@@ -59,7 +65,7 @@ class CollectViewController: UIViewController {
     // Update the timer every second
     @ objc func updateTimer() {
         self.seconds -= 1
-        if self.seconds <= 0 {
+        if self.seconds == 0 {
             self.timer.invalidate()
             self.seconds = 0
         }

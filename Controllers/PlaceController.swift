@@ -13,7 +13,7 @@ import UIKit
 
 class PlaceController {
     
-    // Shared static is used to share the placeController among viewcontrollers.
+    // Shared static is used to share the placeController among viewcontrollers
     static let shared = PlaceController()
     
     func loadCafes(completion: @escaping ([PlaceLocation]?) -> Void) {

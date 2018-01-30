@@ -1,6 +1,8 @@
 //
 //  CafesData.swift
 //
+//  Loading the data from the API
+//
 //
 //  Created by Martijn Blauw on 25-01-18.
 //
