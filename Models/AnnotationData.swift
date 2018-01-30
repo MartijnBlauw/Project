@@ -10,7 +10,7 @@ import Foundation
 import MapKit
 import CoreLocation
 
-class CafesLocation: NSObject, MKAnnotation {
+class AnnotationCafes: NSObject, MKAnnotation {
     let title: String?
     let coordinate: CLLocationCoordinate2D
     

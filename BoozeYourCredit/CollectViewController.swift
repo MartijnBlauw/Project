@@ -2,6 +2,8 @@
 //  CollectViewController.swift
 //  BoozeYourCredit
 //
+//  On this screen the user can collect their credits.
+//
 //  Created by Martijn Blauw on 11-01-18.
 //  Copyright © 2018 Martijn Blauw. All rights reserved.
 //
@@ -21,13 +23,22 @@ class CollectViewController: UIViewController {
     var seconds = 5
     var timer = Timer()
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Trigger the timer
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer),
+                                     userInfo: nil, repeats: true)
+    }
+    
     // MARK: Actions
     @IBAction func collectButtonTapped(_ sender: UIButton) {
         
         // If the timer is 0, the user can collect a credit
         if seconds == 0 {
             guard let userid = userOnline?.uid  else { return }
-        
+            
+            // Update saldo in Firebase
             let coinRef = ref.child(userid).child("credit")
             
             coinRef.observeSingleEvent(of: .value) { (snapshot) in
@@ -40,17 +51,6 @@ class CollectViewController: UIViewController {
                 }
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Trigger the timer
-        timer = Timer.scheduledTimer(timeInterval: 1.0,
-                                     target: self,
-                                     selector: #selector(updateTimer),
-                                     userInfo: nil,
-                                     repeats: true)
     }
     
     // Update the timer every second

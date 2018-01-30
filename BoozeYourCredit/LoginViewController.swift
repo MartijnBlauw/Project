@@ -2,6 +2,8 @@
 //  LoginViewController.swift
 //  BoozeYourCredit
 //
+//  On this screen the user can register and log in.
+//
 //  Created by Martijn Blauw on 11-01-18.
 //  Copyright © 2018 Martijn Blauw. All rights reserved.
 //

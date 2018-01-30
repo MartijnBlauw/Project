@@ -2,6 +2,8 @@
 //  HelpViewController.swift
 //  BoozeYourCredit
 //
+//  On this screen the user can find the manual of the app.
+//
 //  Created by Martijn Blauw on 11-01-18.
 //  Copyright © 2018 Martijn Blauw. All rights reserved.
 //
@@ -11,10 +13,8 @@ import UIKit
 class HelpViewController: UIViewController {
 
     // MARK: Outlets
-
     @IBOutlet weak var helpLabel1: UILabel!
     @IBOutlet weak var helpLabel2: UILabel!
-
     @IBOutlet weak var helpLabel3: UILabel!
     
     override func viewDidLoad() {

@@ -2,6 +2,8 @@
 //  MapViewController.swift
 //  BoozeYourCredit
 //
+//  On this screen the user can find the bar they are at.
+//
 //  Created by Martijn Blauw on 11-01-18.
 //  Copyright © 2018 Martijn Blauw. All rights reserved.
 //
@@ -19,15 +21,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var cafes: [PlaceLocation]?
     var userLocation: CLLocation?
     var locationManager = CLLocationManager()
-    
-    // MARK: Actions
-    @IBAction func unwindToMap(unwindSegue: UIStoryboardSegue) {
-        
-    }
-    
+            
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.mapView.delegate = self
         
         // Get the current location of the user
@@ -39,13 +36,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         // Load the markers on the map
         if let cafes = cafes {
             for cafe in cafes {
-                let cafeAnnotation = CafesLocation(title: cafe.title!, coordinate: cafe.coordinate)
+                let cafeAnnotation = AnnotationCafes(title: cafe.title!, coordinate: cafe.coordinate)
                 self.mapView.addAnnotation(cafeAnnotation)
             }
         }
     }
-
     
+    // MARK: Actions
+    @IBAction func unwindToMap(unwindSegue: UIStoryboardSegue) {
+        
+    }
     
     // Update the current location and zoom in on current location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -53,7 +53,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         self.userLocation = locations.first
         
         let coordinations = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude,longitude: userLocation.coordinate.longitude)
-        let span = MKCoordinateSpanMake(0.8, 0.8)
+        let span = MKCoordinateSpanMake(0.5, 0.5)
         let region = MKCoordinateRegion(center: coordinations, span: span)
         
         self.mapView.showsUserLocation = true
@@ -65,19 +65,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         print(error)
     }
     
-    // Show message
+    // Function for a message
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
-        present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        guard let annotation = annotation as? CafesLocation else { return nil }
+        guard let annotation = annotation as? AnnotationCafes else { return nil }
         let identifier = "marker"
         var view: MKMarkerAnnotationView
 
@@ -96,7 +96,7 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
         
-        // Get coordinates pin
+        // Get coordinates of the tapped marker
         let markerCoordinates = view.annotation?.coordinate
         let getLat: CLLocationDegrees = markerCoordinates!.latitude
         let getLon: CLLocationDegrees = markerCoordinates!.longitude
