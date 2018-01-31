@@ -48,13 +48,13 @@ class LoginViewController: UIViewController {
                     return
                 }
                 
-                guard let uid = user?.uid  else { return }
+                guard let userid = user?.uid  else { return }
                 
                 Auth.auth().signIn(withEmail: self.textFieldLoginEmail.text!, password: self.textFieldLoginPassword.text!)
                 
-                let ref = Database.database().reference(withPath: "numberOfCredits").child(uid)
+                let coinRef = Database.database().reference(withPath: "numberOfCredits").child(userid)
                 let newSaldo = ["credit": 0]
-                ref.updateChildValues(newSaldo, withCompletionBlock: { (error, ref) in
+                coinRef.updateChildValues(newSaldo, withCompletionBlock: { (error, coinRef) in
                     if error != nil {
                         print(error!)
                     }
