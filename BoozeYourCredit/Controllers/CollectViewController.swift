@@ -33,6 +33,7 @@ class CollectViewController: UIViewController {
         guard let cafeName = cafeName else { return }
         cafeNameLabel.text = "\(cafeName)"
         
+        // Change design button
         collectButton.layer.cornerRadius = 8
         
         // Trigger the timer
@@ -40,14 +41,11 @@ class CollectViewController: UIViewController {
                                      userInfo: nil, repeats: true)
     }
     
-    // MARK: Actions
+    // If the timer is 0, the user can collect a credit and update saldo in Firebase
     @IBAction func collectButtonTapped(_ sender: UIButton) {
-        
-        // If the timer is 0, the user can collect a credit
         if seconds == 0 {
             guard let userid = userOnline?.uid  else { return }
             
-            // Update saldo in Firebase
             let coinRef = ref.child(userid).child("credit")
             
             coinRef.observeSingleEvent(of: .value) { (snapshot) in
@@ -59,6 +57,13 @@ class CollectViewController: UIViewController {
                     coinRef.setValue(self.currentCoins)
                 }
             }
+            present(ShowAlertController.shared.showAlert(title: "",
+                                                         message: "Your saldo increased with 1!"),
+                    animated: true)
+        } else {
+            present(ShowAlertController.shared.showAlert(title: "",
+                                                         message: "You have to wait a little bit longer"),
+                    animated: true)
         }
     }
     

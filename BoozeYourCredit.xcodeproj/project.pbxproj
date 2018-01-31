@@ -20,8 +20,8 @@
 		4846F35B2020BA8600C1409B /* ShowAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4846F35A2020BA8600C1409B /* ShowAlertController.swift */; };
 		486B30D42018A10B00F8B8AB /* CreditData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486B30D32018A10B00F8B8AB /* CreditData.swift */; };
 		48ADF9F42015EFEB003AE4AC /* PlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ADF9F32015EFEB003AE4AC /* PlaceController.swift */; };
+		48DCDA3E2021CE6D005F34FD /* CafeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DCDA3D2021CE6D005F34FD /* CafeData.swift */; };
 		48DD657C201A941300D92AC0 /* AnnotationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD657B201A941300D92AC0 /* AnnotationData.swift */; };
-		48DD6580201A94E400D92AC0 /* CafesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD657F201A94E400D92AC0 /* CafesData.swift */; };
 		D94ED336FE26D0AF929FCA06 /* Pods_BoozeYourCredit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A516AF5993C2BBC255551B1C /* Pods_BoozeYourCredit.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +42,8 @@
 		4846F35A2020BA8600C1409B /* ShowAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertController.swift; sourceTree = "<group>"; };
 		486B30D32018A10B00F8B8AB /* CreditData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditData.swift; sourceTree = "<group>"; };
 		48ADF9F32015EFEB003AE4AC /* PlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceController.swift; sourceTree = "<group>"; };
+		48DCDA3D2021CE6D005F34FD /* CafeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeData.swift; sourceTree = "<group>"; };
 		48DD657B201A941300D92AC0 /* AnnotationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationData.swift; sourceTree = "<group>"; };
-		48DD657F201A94E400D92AC0 /* CafesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CafesData.swift; path = /Users/martijnblauw/Desktop/Project/Models/CafesData.swift; sourceTree = "<absolute>"; };
 		9BD9B0858087BA315E0EF14A /* Pods-BoozeYourCredit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoozeYourCredit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoozeYourCredit/Pods-BoozeYourCredit.debug.xcconfig"; sourceTree = "<group>"; };
 		A516AF5993C2BBC255551B1C /* Pods_BoozeYourCredit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoozeYourCredit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,8 +63,6 @@
 		481152612007A9DB008F6109 = {
 			isa = PBXGroup;
 			children = (
-				48ADF9F7201638C3003AE4AC /* Controllers */,
-				48ADF9F62015F007003AE4AC /* Models */,
 				4811526C2007A9DB008F6109 /* BoozeYourCredit */,
 				4811526B2007A9DB008F6109 /* Products */,
 				CC0EF19F1975ACECC460D355 /* Pods */,
@@ -83,13 +81,10 @@
 		4811526C2007A9DB008F6109 /* BoozeYourCredit */ = {
 			isa = PBXGroup;
 			children = (
+				48ADF9F62015F007003AE4AC /* Models */,
+				48ADF9F7201638C3003AE4AC /* Controllers */,
 				481152712007A9DB008F6109 /* Main.storyboard */,
 				4811526D2007A9DB008F6109 /* AppDelegate.swift */,
-				481152872007AF02008F6109 /* LoginViewController.swift */,
-				481152852007AE85008F6109 /* IndexViewController.swift */,
-				481152892007AFBF008F6109 /* MapViewController.swift */,
-				4811528F2007CB4F008F6109 /* HelpViewController.swift */,
-				4811528D2007C93E008F6109 /* CollectViewController.swift */,
 				481152742007A9DB008F6109 /* Assets.xcassets */,
 				481152762007A9DB008F6109 /* LaunchScreen.storyboard */,
 				481152792007A9DB008F6109 /* Info.plist */,
@@ -101,7 +96,7 @@
 		48ADF9F62015F007003AE4AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				48DD657F201A94E400D92AC0 /* CafesData.swift */,
+				48DCDA3D2021CE6D005F34FD /* CafeData.swift */,
 				48DD657B201A941300D92AC0 /* AnnotationData.swift */,
 				486B30D32018A10B00F8B8AB /* CreditData.swift */,
 			);
@@ -113,6 +108,11 @@
 			children = (
 				48ADF9F32015EFEB003AE4AC /* PlaceController.swift */,
 				4846F35A2020BA8600C1409B /* ShowAlertController.swift */,
+				481152872007AF02008F6109 /* LoginViewController.swift */,
+				481152852007AE85008F6109 /* IndexViewController.swift */,
+				481152892007AFBF008F6109 /* MapViewController.swift */,
+				4811528D2007C93E008F6109 /* CollectViewController.swift */,
+				4811528F2007CB4F008F6109 /* HelpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -277,7 +277,6 @@
 			files = (
 				481152902007CB4F008F6109 /* HelpViewController.swift in Sources */,
 				481152882007AF02008F6109 /* LoginViewController.swift in Sources */,
-				48DD6580201A94E400D92AC0 /* CafesData.swift in Sources */,
 				4846F35B2020BA8600C1409B /* ShowAlertController.swift in Sources */,
 				4811526E2007A9DB008F6109 /* AppDelegate.swift in Sources */,
 				48DD657C201A941300D92AC0 /* AnnotationData.swift in Sources */,
@@ -285,6 +284,7 @@
 				481152862007AE85008F6109 /* IndexViewController.swift in Sources */,
 				4811528A2007AFBF008F6109 /* MapViewController.swift in Sources */,
 				4811528E2007C93E008F6109 /* CollectViewController.swift in Sources */,
+				48DCDA3E2021CE6D005F34FD /* CafeData.swift in Sources */,
 				48ADF9F42015EFEB003AE4AC /* PlaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

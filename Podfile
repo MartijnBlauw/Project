@@ -6,9 +6,6 @@ target 'BoozeYourCredit' do
   use_frameworks!
 
   # Pods for BoozeYourCredit
-  pod 'GooglePlaces'
-  pod 'GooglePlacePicker'
-  pod 'GoogleMaps'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'

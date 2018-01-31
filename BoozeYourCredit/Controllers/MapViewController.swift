@@ -43,7 +43,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    // MARK: Actions
+    // Go back to the MapViewController
     @IBAction func unwindToMap(unwindSegue: UIStoryboardSegue) {
         
     }
@@ -66,8 +66,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         print(error)
     }
     
+    // Send name of the cafe to the next screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Send name of the cafe to the next screen
         if segue.identifier == "CollectSegue" {
             let destination = segue.destination as! UINavigationController
             let collectViewController = destination.topViewController as! CollectViewController

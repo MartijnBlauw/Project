@@ -42,6 +42,7 @@ class LoginViewController: UIViewController {
                 if error == nil {
                     Auth.auth().signIn(withEmail: self.textFieldLoginEmail.text!,
                                        password: self.textFieldLoginPassword.text!)
+
                 }
             }
         }
