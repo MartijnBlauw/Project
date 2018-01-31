@@ -17,6 +17,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var textFieldLoginEmail: UITextField!
     @IBOutlet weak var textFieldLoginPassword: UITextField!
     
+    //MARK: Properties
+//    var ref = Database.database().reference(withPath: "numberOfCredits")
+//    let userOnline = Auth.auth().currentUser
+//    var currentCoins: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,13 +42,23 @@ class LoginViewController: UIViewController {
             let emailField = alert.textFields![0]
             let passwordField = alert.textFields![1]
 
-            Auth.auth().createUser(withEmail: emailField.text!,
-                                   password: passwordField.text!) { user, error in
-                if error == nil {
-                    Auth.auth().signIn(withEmail: self.textFieldLoginEmail.text!,
-                                       password: self.textFieldLoginPassword.text!)
-
+            Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { user, error in
+                if error != nil {
+                    self.present(ShowAlertController.shared.showAlert(title: "Error", message: (error?.localizedDescription)!), animated: true)
+                    return
                 }
+                
+                guard let uid = user?.uid  else { return }
+                
+                Auth.auth().signIn(withEmail: self.textFieldLoginEmail.text!, password: self.textFieldLoginPassword.text!)
+                
+                let ref = Database.database().reference(withPath: "numberOfCredits").child(uid)
+                let newSaldo = ["credit": 0]
+                ref.updateChildValues(newSaldo, withCompletionBlock: { (error, ref) in
+                    if error != nil {
+                        print(error!)
+                    }
+                })
             }
         }
         
@@ -67,8 +82,11 @@ class LoginViewController: UIViewController {
     
     // Login
     @IBAction func loginButton(_ sender: UIButton) {
-        Auth.auth().signIn(withEmail: textFieldLoginEmail.text!,
-                           password: textFieldLoginPassword.text!)
+        Auth.auth().signIn(withEmail: textFieldLoginEmail.text!, password: textFieldLoginPassword.text!) { (user, error) in
+            if error != nil {
+                self.present(ShowAlertController.shared.showAlert(title: "Error", message: (error?.localizedDescription)!), animated: true)
+            }
+        }
     }
 }
 

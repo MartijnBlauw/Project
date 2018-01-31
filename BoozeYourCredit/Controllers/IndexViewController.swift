@@ -57,12 +57,9 @@ class IndexViewController: UIViewController {
         let coinRef = ref.child(userid).child("credit")
         
         coinRef.observeSingleEvent(of: .value) { (snapshot) in
-            if let snapshot = snapshot.value as? Int {
-                if snapshot >= 10 {
-//            if snapshot.value != nil && (snapshot.value as! Int) >= 10 {
-                    self.currentCoins = snapshot
+            if snapshot.value != nil && (snapshot.value as! Int) >= 10 {
+                    self.currentCoins = snapshot.value as? Int
                     coinRef.setValue(self.currentCoins! - 10)
-                }
             } else {
                 self.present(ShowAlertController.shared.showAlert(title: "Sorry", message: "You have not enough coins for a drink"), animated: true)
             }
