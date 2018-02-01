@@ -36,5 +36,16 @@ In deze controller wordt de data uit de API ingeladen en de JSON wordt gedecodee
 
 In deze class staat een shared function voor de UIAlertController meerdere malen terug komt in de app.
 
+**Challenges**
 
-[![BCH compliance](https://bettercodehub.com/edge/badge/MartijnBlauw/Project?branch=master)](https://bettercodehub.com/)
+In het begin wilde ik gaan werken met GoogleMaps en GooglePlaces om zo cafés te kunnen zoeken en daarom had ik in de eerste week deze pods geïnstalleerd. Met behulp van geofence wilde ik verifiëren of de gebruiker op dezelfde locatie zou zijn als het betreffende café. Dit zag ik als een grote uitdaging, omdat wij met AppStudio hier nog niet mee gewerkt hadden.
+
+Hierna heb ik het internet afgezocht naar informatie en filmpjes over geofence met GoogleMaps. Helaas was hier weinig over te vinden, maar ik zag wel veel informatie over geofence met MapKit voorbij komen en op de site van RayWenderlich is hier ook een tutorial over. Dat is de reden geweest om over te stappen naar MapKit in plaats van GoogleMaps. Hierdoor had ik een API nodig met informatie over cafés, zodat ik deze als markers kon plaatsen op de kaart. De coordinaten van de cafés werden alleen niet als het juiste type ingeladen en daarom kon ik de cafés niet inladen op de map via MKAnnotation. Aan mij dus de taak om coördinaten om te schrijven naar het juiste type.
+
+Uiteindelijk had ik alle cafés via MKAnnotation zichtbaar op de kaart. Door middel van geofence was er ook een ronde cirkel (regio) te zien om de marker van de cafés. Op het moment dat een gebruiker regio betrad, wilde ik dat als hij of zij op de marker zou klikken doorgestuurd zou worden naar de CollectViewController. Maar aangezien het klikken op de marker en de regio ontstaan waren in twee aparte functies, wist ik niet hoe ik deze kon koppelen aan elkaar. Na enige tijd kwam ik erachter dat ik dit kon doen door middel van een boolean. Maar nu kon de gebruiker op alle markers klikken als hij of zij een regio betrad. Ik wilde dat de gebruiker alleen op de marker kon klikken van de regio die hij of zij betrad.
+
+In de tussentijd ben ik begonnen met het koppelen aan Firebase, zodat ik dat in ieder geval af zou hebben. Op YouTube zijn veel filmpjes te vinden over Firebase en iOS en zo heb ik vrij makkelijk alle ViewControllers kunnen koppelen aan Firebase.
+
+In de laatste week ben ik met mijn vraag over de het verifiëren van de locatie naar Marijn gegaan en die gaf aan dat het makkelijker was om met CLLocationDistance te werken in plaats van geofence. De geofence functies heb ik volledig uit mijn code gehaald.
+
+**Other solutions** 
