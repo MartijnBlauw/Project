@@ -2,7 +2,7 @@
 
 **Description**
 
-Via deze app kan de gebruiker zoeken naar dichtstbijzijnde horeca gelegenheden. De gebruiker kan als hij langer dan 10 minuten bij een aangesloten café is een credit collecten. Als de gebruiker 10 credits in zijn wallet heeft, kan hij dit verzilveren bij een van de aangesloten cafés voor een drankje. Naast het feit dat de consument hier iets aan heeft, krijgen de aangesloten bedrijven ook meer naamsbekendheid.
+Via deze app kan de gebruiker zoeken naar dichtstbijzijnde horeca gelegenheden. De gebruiker kan als hij langer dan 15 minuten bij een aangesloten café is een credit collecten. Als de gebruiker 10 credits in zijn wallet heeft, kan hij dit verzilveren bij een van de aangesloten cafés voor een drankje. Naast het feit dat de consument hier iets aan heeft, krijgen de aangesloten bedrijven ook meer naamsbekendheid.
 
 <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Login.png" width="300">
 
@@ -13,11 +13,11 @@ De app bestaat uit 5 viewcontrollers en 3 models.
 
 **LoginViewController.swift**
 
-De code in deze file regelt het registeren en inloggen van de gebruiker. Als de gebruiker op de registerButton klikt dan krijgt hij een UIAlertController te zien met twee textFields. De gebruiker kan hier een account aanmaken. Als het e-mail en wachtwoord aan de vereisten voldoen, wordt de nieuwe gebruiker geregisteerd in Firebase en direct doorgestuurd naar de IndexViewController. Zo niet, dan krijgt de gebruiker een foutmelding. Als de gebruiker op de loginButton klikt dan wordt er gecheckt of hij bestaat en het wachtwoord goed is. Als aan alle vereisten wordt voldaan, wordt de gebruiker doorgestuurd naar de IndexViewController. Zo niet, dan krijgt de gebruiker een foutmelding.
+De code in deze file regelt het registeren en inloggen van de gebruiker. Als de gebruiker op de registerButton klikt dan krijgt hij een UIAlertController te zien met twee textFields. De gebruiker kan hier een account aanmaken. Als het e-mail en wachtwoord aan de vereisten voldoen, wordt de nieuwe gebruiker geregisteerd in Firebase en direct doorgestuurd naar de IndexViewController. Zo niet, dan krijgt de gebruiker een foutmelding. Als de gebruiker wilt inloggen dan kan hij de twee textFields gebruiken, zodra hij op de loginButton klikt dan wordt er gecheckt of de gebruiker bestaat en het wachtwoord goed is. Als aan alle vereisten wordt voldaan, wordt de gebruiker doorgestuurd naar de IndexViewController. Zo niet, dan krijgt de gebruiker een foutmelding.
 
 **IndexViewController.swift**
 
-Op dit scherm kan de gebruiker zijn aantal credits zien en zijn credits verzilveren door op freeDrinkButtonTapped te klikken. Het aantal credits wordt opgehaald uit Firebase en als de gebruiker genoeg credits heeft dan wordt zijn of haar saldo verminderd met 10. Als de gebruiker nog niet genoeg credits heeft dan krijgt hij een UIAlertController te zien met een melding. Verder kan de gebruiker zien hoe de app werkt, door te klikken op 'Help'. De gebruiker wordt dan doorgestuurd naar de HelpViewController, waar de handleiding te vinden is. Als de gebruiker klikt op de searchButtonTapped, dan wordt hij doorgestuurd naar de MapViewController, zodra alle data is ingeladen op de map en niet eerder. Ook is er op dit scherm een mogelijkheid om uit te loggen, door simpelweg op de logOutButton te klikken.
+Op dit scherm kan de gebruiker zijn aantal credits zien en zijn credits verzilveren door de barman op freeDrinkButtonTapped te laten klikken. Het aantal credits wordt opgehaald uit Firebase en als de gebruiker genoeg credits heeft dan wordt zijn of haar saldo verminderd met 10. Als de gebruiker nog niet genoeg credits heeft dan krijgt hij een UIAlertController te zien met een melding. Verder kan de gebruiker zien hoe de app werkt, door te klikken op 'Help'. De gebruiker wordt dan doorgestuurd naar de HelpViewController, waar de handleiding te vinden is. Als de gebruiker klikt op de searchButtonTapped, dan wordt hij doorgestuurd naar de MapViewController, zodra alle data is ingeladen op de map en niet eerder. Ook is er op dit scherm een mogelijkheid om uit te loggen, door simpelweg op de logOutButton te klikken.
 
 **MapViewController.swift**
 
