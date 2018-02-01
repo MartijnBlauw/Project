@@ -6,11 +6,11 @@ Vandaag heb ik GoogleMaps en GooglePlaces toegevoegd aan mijn app. Onderstaand e
 
 # 17-01-2018
 
-Vandaag heb ik geprobeerd om place pickers te krijgen bij alle GooglePlaces, dit is alleen niet gelukt. Ook kwam ik er achter dat je via GoogleMaps geen geofence kan creëren, terwijl dit noodzakelijk is bij mijn app. Helaas waren er geen assistenten meer om mij te helpen hierbij. 
+Vandaag heb ik geprobeerd om place pickers te krijgen bij alle GooglePlaces, dit is alleen niet gelukt. Ook kwam ik er achter dat het lastig is om via GoogleMaps gebruik te maken van geofence, terwijl dit noodzakelijk is bij mijn app. Helaas waren er geen assistenten meer om mij te helpen hierbij.
 
 # 18-01-2018
 
-Ik wilde vandaag de assistenten om hulp en advies vragen alleen door de strom kon dit niet. Nu ben ik Map Kit aan het gebruiken in plaats van GoogleMaps. De app kan nu de huidige locatie van de gebruiker opvragen, als de gebruiker toestemming geeft. Door middel van MKAnnotation kan ik nu ook locaties toevoegen. Door middel van een JSON wil ik alle barretjes en cafés gaan toevoegen.
+Ik wilde vandaag de assistenten om hulp en advies vragen alleen door de storm kon dit niet. Nu ben ik MapKit aan het gebruiken in plaats van GoogleMaps. De app kan nu de huidige locatie van de gebruiker opvragen, als de gebruiker toestemming geeft. Door middel van MKAnnotation kan ik nu ook locaties toevoegen. Door middel van een JSON wil ik alle barretjes en cafés gaan toevoegen.
 
 # 22-01-2018
 
@@ -44,4 +44,10 @@ Het saldo van de gebruiker kan niet meer negatief worden. Vandaag moest ik de ma
 
 # 30-01-2018
 
-In mijn app gebruik ik meerdere malen een UIAlertController. Vandaag heb ik daarvoor een static shared geschreven, zodat ik niet elke keer dezelfde code gebruik. Verder ben ik bezig geweest met het design van mijn app. Onderaan elke scherm heb ik het logo van mijn app geplaatst en de hoeken van mijn buttons heb ik rond gemaakt. Daarnaast ziet de gebruiker nu de naam van het café staan op de CollectViewController. 
+In mijn app gebruik ik meerdere malen een UIAlertController. Vandaag heb ik daarvoor een static shared geschreven, zodat ik niet elke keer dezelfde code gebruik. Verder ben ik bezig geweest met het design van mijn app. Onderaan elke scherm heb ik het logo van mijn app geplaatst en de hoeken van mijn buttons heb ik rond gemaakt. Daarnaast ziet de gebruiker nu de naam van het café staan op de CollectViewController. Aan het einde van de dag heb ik een Code Review gedaan met Lotte.
+
+# 31-01-2018
+
+Ik ben de dag begonnen met het verwerken van de feedback van Lotte. Hierna heb ik de laatste bug uit mijn app verholpen. Als een nieuwe gebruiker zich zou registeren dan zou hij of zij nog geen credits hebben en dus ook geen waarde hebben in Firebase. Hierdoor crashte mijn app als ik een credit wilde collecten of als ik credits wilde verzilveren voor een drankje. Ik heb de bug verholpen door bij het registeren een waarde van nul op te slaan in Firebase. Ook heb ik een begin gemaakt aan mijn report.
+
+
