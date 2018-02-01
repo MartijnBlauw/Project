@@ -6,7 +6,7 @@ Via deze app kan de gebruiker zoeken naar dichtstbijzijnde horeca gelegenheden. 
 
 
 <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Login.png" width="250">   <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Register.png" width="250">   <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Index.png" width="250">
-<img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Help.png" width="250">   <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Map.png" width="250">   <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Collect.png" width="250">
+<img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Helpscreen.png" width="250">   <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Map.png" width="250">   <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Collect.png" width="250">
 
 **Copyright**
 
