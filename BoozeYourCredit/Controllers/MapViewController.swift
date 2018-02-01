@@ -77,13 +77,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
+        // Check if this annotation is an AnnotationCafes object and create a marker annotation view
         guard let annotation = annotation as? AnnotationCafes else { return nil }
         let identifier = "marker"
         var view: MKMarkerAnnotationView
 
+        // Check if a reusable annotation view is available
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
             dequeuedView.annotation = annotation
             view = dequeuedView
+        // Create new MKMarkerAnnotationView object
         } else {
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
@@ -93,6 +96,7 @@ extension MapViewController: MKMapViewDelegate {
         return view
     }
     
+
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
         
@@ -102,7 +106,7 @@ extension MapViewController: MKMapViewDelegate {
         let getLon: CLLocationDegrees = markerCoordinates!.longitude
         let convertedCoordinates: CLLocation = CLLocation(latitude: getLat, longitude: getLon)
 
-        // Calculate distance between the location of the user and the cafe
+        // Calculate distance between the location of the user and the tapped marker
         if let userLocation = self.userLocation {
             let distance: CLLocationDistance = convertedCoordinates.distance(from: userLocation)
             if distance < 5 {
