@@ -5,6 +5,10 @@
 
 Mensen gaan op vakantie of een dagje erop uit en zijn benieuwd naar de leukste kroegen, cafés en barretjes om een drankje te doen. Maar welke horeca gelegenheden zijn nou het leukst? Daarnaast zijn er voor horeca gelegenheden weinig mogelijkheden om de consument te bereiken. Deze app is gericht op twee doelgroepen, enerzijds de eigenaren van horeca gelegenheden en anderzijds consumenten die zo nu en dan een drankje buiten de deur doen. 
 
+<img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Login.png" width="250"> <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Register.png" width="250"> <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Index.png" width="250">
+<img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Help.png" width="250"> <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Map.png" width="250"> <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Collect.png" width="250">
+
+
 **Oplossing**
 
 Via deze app kan de gebruiker zoeken naar dichtstbijzijnde horeca gelegenheden en zien hoe populair deze plek is onder de gebruikers, dit is af te lezen aan het aantal uitgegeven credits. De gebruiker kan een credit collecten als hij langer dan 5 minuten op een bepaalde locatie is. Als de gebruiker dit eenmaal gedaan heeft, dan kan hij of zij pas 24 uur later opnieuw een credit op die locatie collecten. Als de gebruiker 10 credits in zijn wallet heeft, kan hij of zij dit inwisselen bij een van de aangesloten cafés voor een drankje. Naast het feit dat de consument hier iets aan heeft, krijgen de aangesloten bedrijven ook meer naamsbekendheid. 
