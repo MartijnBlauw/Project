@@ -57,9 +57,7 @@ class CollectViewController: UIViewController {
                     coinRef.setValue(self.currentCoins)
                 }
             }
-            present(ShowAlertController.shared.showAlert(title: "",
-                                                         message: "Your saldo increased with 1!"),
-                    animated: true)
+            performSegue(withIdentifier: "indexSegue", sender: nil)
         } else {
             present(ShowAlertController.shared.showAlert(title: "",
                                                          message: "You have to wait a little bit longer"),
@@ -72,7 +70,6 @@ class CollectViewController: UIViewController {
         self.seconds -= 1
         if self.seconds == 0 {
             self.timer.invalidate()
-            self.seconds = 0
         }
         timerLabel.text = timeString(time: TimeInterval(seconds))
     }

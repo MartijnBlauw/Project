@@ -44,11 +44,6 @@ class IndexViewController: UIViewController {
             }
         }
     }
-    
-    // Go back to IndexViewController
-    @IBAction func unwindToIndex(unwindSegue: UIStoryboardSegue) {
-        
-    }
         
     // Check saldo user, update saldo in Firebase or give an error message
     @IBAction func freeDrinkButtonTapped(_ sender: UIButton) {
@@ -64,6 +59,11 @@ class IndexViewController: UIViewController {
                 self.present(ShowAlertController.shared.showAlert(title: "Sorry", message: "You have not enough coins for a drink"), animated: true)
             }
         }
+    }
+    
+    // Go back to IndexViewController
+    @IBAction func unwindToIndex(unwindSegue: UIStoryboardSegue) {
+        
     }
     
     // Log out

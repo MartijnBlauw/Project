@@ -26,9 +26,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.mapView.delegate = self
-
-        // Get the current location of the user
+        mapView.delegate = self
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
@@ -68,7 +66,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     // Send name of the cafe to the next screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "CollectSegue" {
+        if segue.identifier == "collectSegue" {
             let destination = segue.destination as! UINavigationController
             let collectViewController = destination.topViewController as! CollectViewController
             collectViewController.cafeName = cafeName
@@ -109,7 +107,7 @@ extension MapViewController: MKMapViewDelegate {
             let distance: CLLocationDistance = convertedCoordinates.distance(from: userLocation)
             if distance < 5 {
             self.cafeName = view.annotation?.title!
-            performSegue(withIdentifier: "CollectSegue", sender: nil)
+            performSegue(withIdentifier: "collectSegue", sender: nil)
             } else {
                 present(ShowAlertController.shared.showAlert(title: "Hi!",
                                                              message: "Sorry, you are not close enough to this café"),

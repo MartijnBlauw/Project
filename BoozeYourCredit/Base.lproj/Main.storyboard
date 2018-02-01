@@ -335,7 +335,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="OEr-AP-bSx" id="sTk-ot-xIN"/>
-                        <segue destination="9kV-Ah-b0V" kind="show" identifier="CollectSegue" id="tQD-P9-2UB"/>
+                        <segue destination="9kV-Ah-b0V" kind="show" identifier="collectSegue" id="tQD-P9-2UB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSH-BX-82Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -411,6 +411,7 @@
                         <outlet property="cafeNameLabel" destination="Iva-o1-uG7" id="8lu-zk-veK"/>
                         <outlet property="collectButton" destination="Ybw-uD-69C" id="HYF-lf-02O"/>
                         <outlet property="timerLabel" destination="k9c-NS-pJT" id="FdC-Aj-b5v"/>
+                        <segue destination="dIl-lJ-7du" kind="presentation" identifier="indexSegue" id="ehQ-EH-F0Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9r-wH-aUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -479,4 +480,8 @@
         <image name="appleicon_drinks" width="128" height="128"/>
         <image name="icons8-businessman-filled-50" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tQD-P9-2UB"/>
+        <segue reference="ehQ-EH-F0Y"/>
+    </inferredMetricsTieBreakers>
 </document>
