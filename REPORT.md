@@ -9,7 +9,7 @@ Via deze app kan de gebruiker zoeken naar dichtstbijzijnde horeca gelegenheden. 
 
 **Technical Design**
 
-De app bestaat uit 5 viewcontrollers en 3 models.
+De app bestaat uit 5 viewcontrollers, 2 controllers en 3 models.
 
 **LoginViewController.swift**
 
