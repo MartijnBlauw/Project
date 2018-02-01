@@ -51,7 +51,7 @@ CreditData.swift: Dit is een struct die het aantal credits van de gebruiker opsl
 <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Models.png" width="1000">
 
 
-**Challenges**
+**Process and challenges**
 
 In het begin wilde ik gaan werken met GoogleMaps en GooglePlaces om zo cafés te kunnen zoeken en daarom had ik in de eerste week deze pods geïnstalleerd. Met behulp van geofence wilde ik verifiëren of de gebruiker op dezelfde locatie zou zijn als het betreffende café. Dit zag ik als een grote uitdaging, omdat wij met AppStudio hier nog niet mee gewerkt hadden.
 
