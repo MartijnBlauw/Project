@@ -34,6 +34,6 @@ SOFTWARE.
 
 **Acknowledge sources**
 
-The icon in https://github.com/MartijnBlauw/Project/tree/master/BoozeYourCredit/Assets.xcassets is copyrighted by Icons8 and can be downloaded for free. The image on the login screen in https://github.com/MartijnBlauw/Project/tree/master/BoozeYourCredit/Assets.xcassets is copyrighted by VicHealth.
+The icon in Project/BoozeYourCredit/Assets.xcassets is copyrighted by Icons8 and can be downloaded for free. The image on the login screen in Project/BoozeYourCredit/Assets.xcassets is copyrighted by VicHealth.
 
 
