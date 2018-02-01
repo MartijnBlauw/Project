@@ -4,9 +4,10 @@
 
 Via deze app kan de gebruiker zoeken naar dichtstbijzijnde horeca gelegenheden. De gebruiker kan als hij of zij langer dan 10 minuten bij een aangesloten café is een credit collecten. Als de gebruiker 10 credits in zijn wallet heeft, kan hij dit verzilveren bij een van de aangesloten cafés voor een drankje. Naast het feit dat de consument hier iets aan heeft, krijgen de aangesloten bedrijven ook meer naamsbekendheid.
 
-<img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Login.png" width="250">
+<img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Login.png" width="300">
 
-**Design**
+
+**Technical Design**
 
 De app bestaat uit 5 viewcontrollers en 3 models.
 
@@ -38,7 +39,8 @@ In deze controller wordt de data uit de API ingeladen en de JSON wordt gedecodee
 
 In deze class staat een shared function voor de UIAlertController meerdere malen terug komt in de app.
 
-Verder zijn er 3 models:
+
+**Models**
 
 CafeData.swift : Dit is een struct die de data van de API opslaat en gelijk omzet in de juiste types.
 
@@ -46,7 +48,8 @@ AnnotationData.swift: Deze struct wordt gebruikt om de markers te plaatsen op de
 
 CreditData.swift: Dit is een struct die het aantal credits van de gebruiker opslaat.
 
-<img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Models.png" width="400">
+<img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Models.png" width="1000">
+
 
 **Challenges**
 
