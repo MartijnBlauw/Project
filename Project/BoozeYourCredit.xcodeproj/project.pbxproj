@@ -84,9 +84,9 @@
 				48ADF9F62015F007003AE4AC /* Models */,
 				48ADF9F7201638C3003AE4AC /* Controllers */,
 				481152712007A9DB008F6109 /* Main.storyboard */,
-				4811526D2007A9DB008F6109 /* AppDelegate.swift */,
 				481152742007A9DB008F6109 /* Assets.xcassets */,
 				481152762007A9DB008F6109 /* LaunchScreen.storyboard */,
+				4811526D2007A9DB008F6109 /* AppDelegate.swift */,
 				481152792007A9DB008F6109 /* Info.plist */,
 				481152832007AAEA008F6109 /* GoogleService-Info.plist */,
 			);
