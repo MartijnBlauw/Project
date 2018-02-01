@@ -17,11 +17,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var textFieldLoginEmail: UITextField!
     @IBOutlet weak var textFieldLoginPassword: UITextField!
     
-    //MARK: Properties
-//    var ref = Database.database().reference(withPath: "numberOfCredits")
-//    let userOnline = Auth.auth().currentUser
-//    var currentCoins: Int?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -90,6 +85,7 @@ class LoginViewController: UIViewController {
     }
 }
 
+// Taking care of dismissal of the keyboard
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == textFieldLoginPassword {
