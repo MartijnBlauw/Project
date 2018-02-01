@@ -6,7 +6,9 @@ Via deze app kan de gebruiker zoeken naar dichtstbijzijnde horeca gelegenheden. 
 
 <img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Login.png" width="250">
 
-**High level overview**
+**Design**
+
+De app bestaat uit 5 viewcontrollers en 3 models.
 
 **LoginViewController.swift**
 
@@ -36,16 +38,36 @@ In deze controller wordt de data uit de API ingeladen en de JSON wordt gedecodee
 
 In deze class staat een shared function voor de UIAlertController meerdere malen terug komt in de app.
 
+Verder zijn er 3 models:
+
+CafeData.swift : Dit is een struct die de data van de API opslaat en gelijk omzet in de juiste types.
+
+AnnotationData.swift: Deze struct wordt gebruikt om de markers te plaatsen op de kaart.
+
+CreditData.swift: Dit is een struct die het aantal credits van de gebruiker opslaat.
+
+
 **Challenges**
 
 In het begin wilde ik gaan werken met GoogleMaps en GooglePlaces om zo cafés te kunnen zoeken en daarom had ik in de eerste week deze pods geïnstalleerd. Met behulp van geofence wilde ik verifiëren of de gebruiker op dezelfde locatie zou zijn als het betreffende café. Dit zag ik als een grote uitdaging, omdat wij met AppStudio hier nog niet mee gewerkt hadden.
 
-Hierna heb ik het internet afgezocht naar informatie en filmpjes over geofence met GoogleMaps. Helaas was hier weinig over te vinden, maar ik zag wel veel informatie over geofence met MapKit voorbij komen en op de site van RayWenderlich is hier ook een tutorial over. Dat is de reden geweest om over te stappen naar MapKit in plaats van GoogleMaps. Hierdoor had ik een API nodig met informatie over cafés, zodat ik deze als markers kon plaatsen op de kaart. De coordinaten van de cafés werden alleen niet als het juiste type ingeladen en daarom kon ik de cafés niet inladen op de map via MKAnnotation. Aan mij dus de taak om coördinaten om te schrijven naar het juiste type.
+Hierna heb ik het internet afgezocht naar informatie en filmpjes over geofence met GoogleMaps. Helaas was hier weinig over te vinden, maar ik zag wel veel informatie over geofence met MapKit voorbij komen en op de site van RayWenderlich was hier ook een tutorial over. Dat is de reden geweest om over te stappen naar MapKit in plaats van GoogleMaps. Hierdoor had ik een API nodig met locatie informatie over cafés, zodat ik deze als markers kon plaatsen op de kaart. De coördinaten van de cafés werden alleen niet als het juiste type ingeladen en daarom kon ik de cafés niet inladen op de map via MKAnnotation. Aan mij dus de taak om coördinaten om te schrijven naar het juiste type.
 
-Uiteindelijk had ik alle cafés via MKAnnotation zichtbaar op de kaart. Door middel van geofence was er ook een ronde cirkel (regio) te zien om de marker van de cafés. Op het moment dat een gebruiker regio betrad, wilde ik dat als hij of zij op de marker zou klikken doorgestuurd zou worden naar de CollectViewController. Maar aangezien het klikken op de marker en de regio ontstaan waren in twee aparte functies, wist ik niet hoe ik deze kon koppelen aan elkaar. Na enige tijd kwam ik erachter dat ik dit kon doen door middel van een boolean. Maar nu kon de gebruiker op alle markers klikken als hij of zij een regio betrad. Ik wilde dat de gebruiker alleen op de marker kon klikken van de regio die hij of zij betrad.
+Uiteindelijk had ik alle cafés via MKAnnotation zichtbaar op de kaart. Door middel van geofence was er ook een ronde cirkel (regio) te zien om de marker van de cafés. Op het moment dat een gebruiker regio betrad, wilde ik dat als hij of zij op de marker zou klikken doorgestuurd zou worden naar de CollectViewController. Maar aangezien het klikken op de marker en de regio ontstaan in twee aparte functies, wist ik niet hoe ik deze kon koppelen aan elkaar. Na enige tijd kwam ik erachter dat ik dit kon doen door middel van een boolean. Maar nu kon de gebruiker op alle markers klikken als hij of zij een regio betrad. Ik wilde dat de gebruiker alleen op de marker kon klikken van de regio die hij of zij betrad.
 
-In de tussentijd ben ik begonnen met het koppelen aan Firebase, zodat ik dat in ieder geval af zou hebben. Op YouTube zijn veel filmpjes te vinden over Firebase en iOS en zo heb ik vrij makkelijk alle ViewControllers kunnen koppelen aan Firebase.
+In de tussentijd ben ik begonnen met het koppelen van mijn ViewControllers aan Firebase, zodat ik dat in ieder geval af zou hebben. Op YouTube zijn veel filmpjes te vinden over Firebase en iOS en zo heb ik vrij makkelijk alle ViewControllers kunnen koppelen aan Firebase.
 
-In de laatste week ben ik met mijn vraag over de het verifiëren van de locatie naar Marijn gegaan en die gaf aan dat het makkelijker was om met CLLocationDistance te werken in plaats van geofence. De geofence functies heb ik volledig uit mijn code gehaald.
+In de laatste week ben ik met mijn vraag over de het verifiëren van de locatie naar Marijn gegaan en die gaf aan dat het makkelijker was om met CLLocationDistance te werken in plaats van geofence. Vervolgens heb ik alle functies van geofence uit mijn code gehaald en ben ik gaan werken met CLLocationDistance. Al snel merkte ik dat dit makkelijker was. Tijdens dit project ben ik vaak overgestapt naar een API of library, onderstaand de uiteindelijke lijst:
 
-**Other solutions** 
+- Firebase: https://firebase.google.com/
+- Eet.nu: https://api.eet.nu/venues?query=cafes
+- MapKit: https://developer.apple.com/documentation/mapkit
+- Core Location: https://developer.apple.com/documentation/corelocation
+
+In vergelijking met mijn DESIGN.md heb ik GoogleMaps en GooglePlaces ingeruild voor drie andere API's/library's.
+
+**Other solutions**
+
+- Ik vind persoonlijk dat GoogleMaps gebruiksvriendelijker is dan de maps van Apple en daarom zou ik als ik meer tijd zou hebben liever met GoogleMaps werken.
+- In mijn huidige app werkt de timer alleen als de gebruiker op de CollectViewController is en wordt de tijd weer gereset als de gebruiker deze ViewController verlaat. Ik zou de timer het liefst op de achtergrond willen laten door lopen, maar dan moet ik de cafés ook koppelen aan de timer en dit opslaan in Firebase.
+- Voor de gebruiker zou het fijn zijn om meer informatie te kunnen zien over de cafés, zoals het adres, openingstijden en reviews. Ook zou ik het aantal credits dat bij een café geïnd is willen weergeven, zodat de gebruiker kan zien hoe populair een café is.
