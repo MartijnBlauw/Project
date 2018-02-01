@@ -2,7 +2,7 @@
 //  CreditData.swift
 //  BoozeYourCredit
 //
-//  Save amount of credits 
+//  Save amount of credits.
 //
 //  Created by Martijn Blauw on 24-01-18.
 //  Copyright © 2018 Martijn Blauw. All rights reserved.

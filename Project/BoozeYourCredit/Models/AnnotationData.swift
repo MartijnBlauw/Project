@@ -2,7 +2,7 @@
 //  AnnotationData.swift
 //  BoozeYourCredit
 //
-//  Save the data for annotation
+//  Save the data for annotation.
 //
 //  Created by Martijn Blauw on 25-01-18.
 //  Copyright © 2018 Martijn Blauw. All rights reserved.

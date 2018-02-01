@@ -2,6 +2,8 @@
 //  PlaceController.swift
 //  BoozeYourCredit
 //
+//  Load data from API.
+//
 //  Created by Martijn Blauw on 22-01-18.
 //  Copyright © 2018 Martijn Blauw. All rights reserved.
 //
@@ -31,4 +33,3 @@ class PlaceController {
         task.resume()
     }
 }
-

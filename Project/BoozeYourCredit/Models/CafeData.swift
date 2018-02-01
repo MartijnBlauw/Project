@@ -2,7 +2,7 @@
 //  CafeData.swift
 //  BoozeYourCredit
 //
-//  Load data from the API
+//  Save data from the API.
 //
 //  Created by Martijn Blauw on 31-01-18.
 //  Copyright © 2018 Martijn Blauw. All rights reserved.
@@ -10,7 +10,6 @@
 
 import Foundation
 import CoreLocation
-import MapKit
 
 struct PlaceLocation: Codable {
     var name: String

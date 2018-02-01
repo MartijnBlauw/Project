@@ -2,6 +2,8 @@
 //  ShowAlertController.swift
 //  BoozeYourCredit
 //
+//  Shared function.
+//
 //  Created by Martijn Blauw on 30-01-18.
 //  Copyright © 2018 Martijn Blauw. All rights reserved.
 //
