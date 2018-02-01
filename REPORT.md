@@ -46,6 +46,7 @@ AnnotationData.swift: Deze struct wordt gebruikt om de markers te plaatsen op de
 
 CreditData.swift: Dit is een struct die het aantal credits van de gebruiker opslaat.
 
+<img src="https://raw.githubusercontent.com/MartijnBlauw/Project/master/doc/Models.png" width="400">
 
 **Challenges**
 
