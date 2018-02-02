@@ -22,7 +22,7 @@ class CollectViewController: UIViewController {
     var ref = Database.database().reference(withPath: "numberOfCredits")
     let userOnline = Auth.auth().currentUser
     var currentCoins: Int?
-    var seconds = 5
+    var seconds = 10
     var timer = Timer()
     var cafeName: String?
     

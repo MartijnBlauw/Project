@@ -56,7 +56,7 @@ class IndexViewController: UIViewController {
                     self.currentCoins = snapshot.value as? Int
                     coinRef.setValue(self.currentCoins! - 10)
             } else {
-                self.present(ShowAlertController.shared.showAlert(title: "Sorry", message: "You have not enough coins for a drink"), animated: true)
+                self.present(ShowAlertController.shared.showAlert(title: "Sorry", message: "You have not 10 credits yet"), animated: true)
             }
         }
     }
